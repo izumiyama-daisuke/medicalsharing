@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: "learuns#index"
-end
+  get 'learns/index'
+  root to: "learns#index"
 end
