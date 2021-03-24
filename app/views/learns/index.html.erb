@@ -12,7 +12,7 @@
 
     <div class='top-page-header-div1'>
     <% if user_signed_in? %>
-      <%= link_to current_user.nickname+"さん", "#", class: "user-nickname" %>
+      <%= link_to current_user.nickname+" さん", "#", class: "user-nickname" %>
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
     <% else %>
       <%= link_to 'ログイン', new_user_session_path, class: "login" %>
