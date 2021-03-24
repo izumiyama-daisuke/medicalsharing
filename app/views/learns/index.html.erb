@@ -1,58 +1,63 @@
 <header class='top-page-header'>
- <a>IzumiIndustory</a>
+  <div>
+    <p class='top-page-header-title'>IzumiIndustory</p>
+  </div>
+  <div>
+    <form class="search-form" action="#">
+      <input class='input-box' placeholder='キーワードから探す'>
+      <button class="search-button">
+        <%= image_tag "search.png", class:"search-icon" %>
+      </button>
+    </form>
 
+    <div class='top-page-header-div1'>
     <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+      <%= link_to current_user.nickname+"さん", "#", class: "user-nickname" %>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
     <% else %>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+      <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
     <% end %>
+    </div>
+  </div>
+</header>
+
+
+ 
 
  <div class='top-page-div0'>
   <div class='top-page-div1'>
     <a class='top-page-title'>メディシェア</a>
     <div class='top-page-div2'>メディシェアは医療を学びたい気持ちを応援します！</div>
-    <div class='top-page-div3'>教えてくれる経験者に会えるかも！？</div>
+    <div class='top-page-div2'>教えてくれる経験者に会えるかも！？</div>
   </div>
-    <a>red</a>
-    <a>red</a>
-  <div class='top-page-div2'>メディシェアは医療を学びたい気持ちを応援します！</div>
-  <div class='top-page-div3'>教えてくれる経験者に会えるかも！？</div>
  </div>
-</header>
 
+ <div class="flex">
+   <div class="top-page-content1-title">教えて！  新規投稿一覧</div>
+ </div>
+ <div class="top-page-content1-form">
+  <p class="top-page-content1-1">教えて欲しい<br>採血のコツ！</p>
+  <p class="top-page-content1-2">教えて欲しい<br>点滴のコツ！</p>
+  <p class="top-page-content1-3">教えて欲しい<br>オペのコツ！</p>
+ </div>
+
+ <div class="flex">
+   <div class="top-page-content2-title">教えたい！  新規投稿一覧</div>
+ </div>
+ <div class="top-page-content2-form">
+  <p class="top-page-content2-1">教えたい<br>採血のコツ！</p>
+  <p class="top-page-content2-2">教えたい<br>点滴のコツ！</p>
+  <p class="top-page-content2-3">教えたい<br>オペのコツ！</p>
+ </div>
+
+<footer></footer>
 
 <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 
-<%#header class='top-page-header'>
-  <div class='search-bar-contents'>
-    <%#= link_to image_tag("furima-logo-color.png", class:"furima-icon"), "/" %>
-    <form class="search-form" action="#">
-      <input class='input-box' placeholder='キーワードから探す'>
-      <button class="search-button">
-        <%#= image_tag "search.png", class:"search-icon" %>
-      </button>
-    </form>
-  </div>
-  <div class='nav'>
-    <ul class='lists-left'>
-      <li><%= link_to 'カテゴリー', "#", class: "category-list" %></li>
-      <li><%= link_to 'ブランド', "#", class: "brand-list" %></li>
-    </ul>
-    <ul class='lists-right'>
 
-    <%# if user_signed_in? %>
-      <li><%#= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
-      <li><%#= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
-    <%# else %>
-      <li><%#= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%#= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-    <%# end %>
-    
-    </ul>
-  </div>
+
 <%#/header>
 
 

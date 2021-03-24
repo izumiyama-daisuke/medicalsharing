@@ -1,5 +1,75 @@
 /* オリジナルアプリのheader部分 */
 
+.top-page-header {
+  background: #f8f8f8;
+  padding: 5vh 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-page-header-div1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: flex-end;
+}
+.input-box {
+  width: 250px;
+}
+.search-button {
+  width: 30px;
+  height: 30px;
+  background-color: aquamarine;
+  justify-content: flex-end;
+  align-items: center;
+}
+.search-icon {
+  width: 15px;
+  background-color: aquamarine;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.user-nickname {
+  display: block;
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 3vh;
+  border-style: double;
+}
+
+.logout {
+  display: block;
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 3vh;
+}
+
+.login {
+  display: block;
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 3vh;
+}
+
+.sign-up {
+  display: block;
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 3vh;
+}
+
+.top-page-header-title {
+  font-size: 8vh;
+  color: rgb(197, 11, 11);
+  text-shadow: 0 0 30px rgba(0, 0, 0, 20);
+  display: flex;
+}
+
 .top-page-div0 {
   
   background-color: rgba(255, 255, 255, 0.726);
@@ -8,20 +78,128 @@
   width: 90vw;
   height: 35vw;
   background-image: image-url('img0002.jpg');
-  
+  padding: 0 30px;
+  margin: 0 auto;
 }
 .top-page-title {
   font-size: 8vh;
-  color: #fff;
+  color: rgb(250, 243, 243);
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 .top-page-div2 {
+  color: rgb(250, 243, 243);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 .top-page-div3 {
 }
-/* オリジナルアプリのheader部分 */
+/* オリジナルアプリのheader部分 *///////////////////////////////////////////////////////////
+/* オリジナルアプリのbody部分 *///////////////////////////////////////////////////////////
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.top-page-content1-title {
+  font-size: 30px;
+  color:rgb(11, 11, 138);
+  width: 92%;
+  margin: 30px 0px 10px 0px;
+  border-bottom-color:royalblue;
+  border-bottom-style: solid;
+}
+
+.top-page-content1-form {
+  display: flex;
+  background-color: silver;
+  padding: 20px 20px;
+  justify-content: space-around;
+  width: 90%;
+  margin: 30px 40px 10px 40px;
+}
+
+.top-page-content1-1 {
+  height: 300px;
+  width: 300px;
+  background-color: salmon;
+  padding: 20px 20px;
+  font-size: 20px;
+  color: rgb(250, 243, 243);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  background-image: image-url('saiketu.jpg');
+}
+
+.top-page-content1-2 {
+  height: 300px;
+  width: 300px;
+  background-color: salmon;
+  padding: 20px 20px;
+  font-size: 20px;
+  color: rgb(250, 243, 243);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  background-image: image-url('tennteki.jpg');
+}
+
+.top-page-content1-3 {
+  height: 300px;
+  width: 300px;
+  background-color: salmon;
+  padding: 20px 20px;
+  font-size: 20px;
+  color: rgb(250, 243, 243);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  background-image: image-url('ope.jpg');
+}
 
 
+.top-page-content2-title {
+  font-size: 30px;
+  color:rgb(11, 11, 138);
+  width: 92%;
+  margin: 30px 0px 10px 0px;
+  border-bottom: 5px solid rosybrown;
+}
+
+.top-page-content2-form {
+  display: flex;
+  background-color: rgb(24, 148, 206);
+  padding: 20px 20px;
+  justify-content: space-around;
+  width: 90%;
+  margin: 30px 40px 10px 40px;
+}
+
+.top-page-content2-1 {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(114, 250, 159);
+  padding: 20px 20px;
+  font-size: 20px;
+  color: rgb(250, 243, 243);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  background-image: image-url('saiketukyouiku.jpg');
+}
+
+.top-page-content2-2 {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(114, 250, 159);
+  padding: 20px 20px;
+  font-size: 20px;
+  color: rgb(250, 243, 243);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  background-image: image-url('tenntekikyouiku.jpg');
+}
+
+.top-page-content2-3 {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(114, 250, 159);
+  padding: 20px 20px;
+  font-size: 20px;
+  color: rgb(250, 243, 243);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  background-image: image-url('opekyouiku.jpg');
+}
 
 
 
