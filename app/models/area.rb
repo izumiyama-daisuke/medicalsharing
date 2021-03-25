@@ -5,4 +5,7 @@ class Area < ActiveHash::Base
     { id: 3, name: '学びたい側が用意' },
     { id: 4, name: '今は未定' },
   ]
-  end
+
+  include ActiveHash::Associations
+  has_many :learns
+end

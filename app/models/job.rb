@@ -18,4 +18,7 @@ class Job < ActiveHash::Base
     { id: 16, name: '学生（薬剤師）' },
     { id: 17, name: 'その他' }
   ]
-  end
+
+  include ActiveHash::Associations
+  has_many :learns
+end

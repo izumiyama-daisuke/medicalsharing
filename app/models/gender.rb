@@ -6,4 +6,7 @@ class Gender < ActiveHash::Base
     { id: 4, name: 'その他' },
     { id: 5, name: '秘密' },
   ]
-  end
+
+  include ActiveHash::Associations
+  has_many :learns
+end
