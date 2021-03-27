@@ -109,6 +109,7 @@
 }
 
 .top-page-content1-form {
+  border-radius: 4%;
   display: flex;
   background-color: rgb(20, 184, 42);
   padding: 20px 20px;
@@ -118,6 +119,7 @@
 }
 
 .top-page-content1-1 {
+  border-radius: 4%;
   height: 300px;
   width: 300px;
   background-color: salmon;
@@ -129,6 +131,7 @@
 }
 
 .top-page-content1-2 {
+  border-radius: 4%;
   height: 300px;
   width: 300px;
   background-color: salmon;
@@ -140,6 +143,7 @@
 }
 
 .top-page-content1-3 {
+  border-radius: 4%;
   height: 300px;
   width: 300px;
   background-color: salmon;
@@ -160,6 +164,7 @@
 }
 
 .top-page-content2-form {
+  border-radius: 4%;
   display: flex;
   background-color: rgb(24, 148, 206);
   padding: 20px 20px;
@@ -169,6 +174,7 @@
 }
 
 .top-page-content2-1 {
+  border-radius: 4%;
   height: 300px;
   width: 300px;
   background-color: rgb(114, 250, 159);
@@ -180,6 +186,7 @@
 }
 
 .top-page-content2-2 {
+  border-radius: 4%;
   height: 300px;
   width: 300px;
   background-color: rgb(114, 250, 159);
@@ -191,6 +198,7 @@
 }
 
 .top-page-content2-3 {
+  border-radius: 4%;
   height: 300px;
   width: 300px;
   background-color: rgb(114, 250, 159);
@@ -200,6 +208,31 @@
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
   background-image: image-url('opekyouiku.jpg');
 }
+
+
+.purchase-btn {
+  width: 120px;
+  background: #3ccace;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.purchase-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.purchase-btn-icon {
+  width: 60%;
+}
+
 
 
 

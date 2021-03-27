@@ -1,0 +1,48 @@
+<%= form_with model: @learn, url:learns_path, local: true do |f| %>
+  <div class="learn-new-top">
+    <div class="learn-box">
+      <div class="learn-box-title">
+        <b>投稿を入力する</b>
+      </div>
+      <div class="learn-box-1">
+        <b>職業<br></b>
+        <%= f.collection_select(:job_id, Job.all, :id, :name, {}, {class:"job-select"}) %><br>
+      </div>
+
+      <div class="learn-box-1">
+        <b>性別<br></b>
+        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"gender-select"}) %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>学びたい内容を記入して下さい<br></b>
+        <%= f.text_area :study, class:"text", placeholder:"学びたい内容" %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>等道府県<br></b>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>場所の提供は？<br></b>
+        <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"area-select"}) %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>場所の詳細情報<br></b>
+        <%= f.text_area :area_provided, class:"text", placeholder:"場所の詳細" %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>教育を受ける側の一人あたりのお礼金<br></b>
+        <%= f.text_field :thankyou_money, class:"thankyou_money", placeholder:"お礼金" %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>教育を受ける側の人数<br></b>
+        <%= f.collection_select(:learn_num_id, LearnNum.all, :id, :name, {}, {class:"learn_num-select"}) %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>条件など（資料の提供、資材の提供など）<br></b>
+        <%= f.text_area :condition, class:"text", placeholder:"条件など" %><br>
+      </div>
+
+      <%= f.submit "投稿する" ,class:"btn" %>
+    </div>
+  </div>
+<% end %> 
