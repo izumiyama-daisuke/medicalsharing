@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_03_25_040109) do
   create_table "learns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "job_id", null: false
     t.integer "gender_id", null: false
+    t.string "studytitle", null: false
     t.text "study", null: false
     t.integer "prefecture_id", null: false
     t.integer "area_id", null: false

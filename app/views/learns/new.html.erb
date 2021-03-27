@@ -13,6 +13,12 @@
         <b>性別<br></b>
         <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"gender-select"}) %><br>
       </div>
+
+      <div class="learn-box-1">
+        <b>学びたい内容のタイトル<br></b>
+        <%= f.string_area :studytitle, class:"text", placeholder:"学びたい内容のタイトル" %><br>
+      </div>
+
       <div class="learn-box-1">
         <b>学びたい内容を記入して下さい<br></b>
         <%= f.text_area :study, class:"text", placeholder:"学びたい内容" %><br>

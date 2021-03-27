@@ -73,10 +73,11 @@
 
 ## learns テーブル(案を入力済み！！)(未実装)
 
-| Column        | Type       | Options                       |
+| Column        | Type       | Options                       |studytitle
 | ------------- | ---------- | ----------------------------- |
 | job_id        | integer    | null: false                   |職種
 | gender_id     | integer    | null: false                   |性別
+| studytitle    | string     | null: false                   |学びたい内容のタイトル
 | study         | text       | null: false                   |学びたい内容
 | prefecture_id | integer    | null: false                   |都道府県
 | area_id       | integer    | null: false                   |場所を提供する側

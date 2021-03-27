@@ -12,6 +12,7 @@ class Learn < ApplicationRecord
 
   # 空の投稿を保存できないようにする
   with_options presence: true do
+    validates :studytitle
     validates :study
   end
 

@@ -3,6 +3,7 @@ class CreateLearns < ActiveRecord::Migration[6.0]
     create_table :learns do |t|
       t.integer :job_id,           null: false
       t.integer :gender_id,        null: false
+      t.string :studytitle,        null: false
       t.text :study,               null: false
       t.integer :prefecture_id,    null: false
       t.integer :area_id,          null: false
