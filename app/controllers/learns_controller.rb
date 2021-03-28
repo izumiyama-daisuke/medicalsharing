@@ -25,6 +25,24 @@ class LearnsController < ApplicationController
     @learn = Learn.find(params[:id])
   end
 
+  def update
+    @learn = Learn.find(params[:id])
+    @learn.update(learn_params)
+    if @learn.save
+      redirect_to learn_path(@item.id)
+    else
+      render 'edit'
+    end
+  end
+
+#  def destroy
+#    if @item.user == current_user
+#      @item.destroy
+#      redirect_to root_path
+#    else
+#      render 'show'
+#    end
+
   private
 
   def learn_params
