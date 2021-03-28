@@ -138,8 +138,18 @@
   margin-bottom: 10px;
 }
 
+.top-page-content1-job1 {
+  color: red;
+  font-size: 15px;
+}
+.top-page-content1-job2 {
+  color: rgb(2, 1, 1);
+  font-size: 15px;
+}
+
 .top-page-content1-study {
   font-size: 15px;
+  margin-top: 5px;
 }
 
 .top-page-content1-money {
@@ -147,8 +157,15 @@
   background-color: #3ccace;
   border: 2px solid #f8f8f8;
   border-radius: 10px;
+  width: 70%;
   color: #fff;
 }
+.top-page-content1-money-form {
+  display: flex;
+  justify-content: center;
+}
+
+
 
 .top-page-content1-2 {
   border-radius: 4%;
