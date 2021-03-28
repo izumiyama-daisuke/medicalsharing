@@ -43,7 +43,7 @@
 <div class="top-page-content1-form">
   <% @learns.each do |learn| %>
     <div class="learn-list">
-      <%#= link_to learn_path(learn.id) do %>    <%# 詳細ページへリンク %>
+      <%= link_to learn_path(learn.id) do %>    <%# 詳細ページへリンク %>
         <div class="top-page-content1-1" >       <%# 一つの投稿の外枠 %>
           <p class="top-page-content1-studytitle"><%= learn.studytitle %></p>
           <span class="top-page-content1-job2">投稿者：
@@ -56,7 +56,7 @@
             </div>
           <% end %>
         </div>
-      <%# end %>
+      <% end %>
     </div>
   <% end %>
 </div>
