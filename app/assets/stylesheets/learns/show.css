@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
 }
-/* 依頼登録画面の外枠 */
+/* 依頼詳細画面の外枠 */
 .learn-new-top {
   width: 100vw;
   display: flex;
@@ -35,3 +35,26 @@
   height: 100px;
 }
 
+/*--------------------------------*/
+.purchase-btn2 {
+  width: 120px;
+  background: #c724d6;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 180px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.purchase-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.purchase-btn-icon {
+  width: 60%;
+}
