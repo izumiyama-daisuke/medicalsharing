@@ -1,0 +1,37 @@
+/* paddingやborderを指定してもボックスサイズに含まれる設定 */
+* {
+  box-sizing: border-box;
+}
+/* 依頼登録画面の外枠 */
+.learn-new-top {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+  
+}
+
+.learn-box {
+  background-color: rgb(109, 219, 109);
+  width: 600px;
+  padding: 50px; 
+}
+
+.learn-box-title {
+  font-size: 35px;
+  justify-content: center;
+}
+
+.learn-box-1 {
+  margin: 20px 0px;
+}
+
+.job-select, .gender-select, .text, .prefecture-select, .area-select, .thankyou_money, .learn_num-select, .studytitle {
+  width: 90%;
+  height: 30px;
+}
+
+.text {
+  height: 100px;
+}
+
