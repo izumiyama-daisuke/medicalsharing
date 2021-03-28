@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'learns/index'
   root to: "learns#index"
 
-  resources :learns, only: [:index, :new, :create, :show]
+  resources :learns, only: [:index, :new, :create, :show, :edit, :update]
   
 
 end

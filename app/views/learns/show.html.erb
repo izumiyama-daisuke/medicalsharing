@@ -47,11 +47,23 @@
         <b>条件など（資料の提供、資材の提供など）<br></b>
         <%= @learn.condition %><br>
       </div>
-
-      <%= link_to('/learns/new', class: 'purchase-btn') do %>
-        <span class='purchase-btn-text'>編　集</span>
-        <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+      
+      <% if user_signed_in? %>
+        <% if current_user.id == @learn.user_id %>
+          <%= link_to(edit_learn_path(@learn), class: 'purchase-btn') do %>
+            <span class='purchase-btn-text'>編  集</span>
+            <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+          <% end %>
+          <%= link_to(edit_learn_path(@learn), class: 'purchase-btn2') do %>
+            <span class='purchase-btn-text'>削  除</span>
+            <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+          <% end %>
+        <% end %>
       <% end %>
+<%# フリマの参考コードーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
+  
+<%# フリマの参考コードーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
+
     </div>
   </div>
 <% end %> 
