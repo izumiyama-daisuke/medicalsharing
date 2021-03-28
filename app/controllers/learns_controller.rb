@@ -29,7 +29,7 @@ class LearnsController < ApplicationController
     @learn = Learn.find(params[:id])
     @learn.update(learn_params)
     if @learn.save
-      redirect_to learn_path(@item.id)
+      redirect_to learn_path(@learn.id)
     else
       render 'edit'
     end
