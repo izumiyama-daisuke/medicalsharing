@@ -33,6 +33,44 @@
   </div>
  </div>
 
+
+<%#/登録した教えて！を表示試し %>
+
+ <div class="flex">
+   <div class="top-page-content1-title">教えて！  新規投稿一覧</div>
+ </div>
+
+<div class="top-page-content1-form">
+  <% @learns.each do |learn| %>
+    <div class="learn-list">
+      <%#= link_to learn_path(learn.id) do %>    <%# 詳細ページへリンク %>
+        <div class="top-page-content1-1" >       <%# 一つの投稿の外枠 %>
+          <p class="top-page-content1-studytitle"><%= learn.studytitle %></p>
+          <p class="top-page-content1-study"><%= learn.study %></p>
+          <% if learn.thankyou_money != 0 && learn.thankyou_money != nil %>
+            <p class="top-page-content1-money">お礼金<%= learn.thankyou_money %>円</p>
+          <% end %>
+        </div>
+      <%# end %>
+    </div>
+  <% end %>
+</div>
+<%#
+<ul class='item-lists'>
+      <% @item.each do |item| >
+      <li class='list'>
+        <%#= link_to item_path(item.id) do %>
+      <%#  <div class='item-img-content'>
+          <div class="items">
+          <%# item.images.each do |image| %>
+            <%# if image == item.images[0] %>   
+              <%#= image_tag image, class:'item-img' %>
+            <%# end %>
+          <%# end %>
+       <%#   </div>  %>
+<%#/登録した教えて！を表示試し %>
+
+<%#
  <div class="flex">
    <div class="top-page-content1-title">教えて！  新規投稿一覧</div>
  </div>
@@ -50,7 +88,7 @@
   <p class="top-page-content2-2">教えたい<br>点滴のコツ！</p>
   <p class="top-page-content2-3">教えたい<br>オペのコツ！</p>
  </div>
-
+%>
 
 
 <footer></footer>
@@ -60,12 +98,11 @@
   <%= image_tag 'menu_coffee01.jpg' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
 
-<%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 
 
 
-<%#/header>
+<%#/header %>
 
 
 <%#= render "shared/header" %>

@@ -26,7 +26,7 @@
   margin: 20px 0px;
 }
 
-.job-select, .gender-select, .text, .prefecture-select, .area-select, .thankyou_money, .learn_num-select {
+.job-select, .gender-select, .text, .prefecture-select, .area-select, .thankyou_money, .learn_num-select, .studytitle {
   width: 90%;
   height: 30px;
 }
