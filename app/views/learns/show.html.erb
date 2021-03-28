@@ -2,53 +2,56 @@
   <div class="learn-new-top">
     <div class="learn-box">
       <div class="learn-box-title">
-        <b>投稿を編集する</b>
+        <b>投稿詳細を表示する</b>
       </div>
       <div class="learn-box-1">
         <b>あなたの職業<br></b>
-        <%= f.collection_select(:job_id, Job.all, :id, :name, {}, {class:"job-select"}) %><br>
+        <%= @learn.job.name %><br>
       </div>
 
       <div class="learn-box-1">
         <b>性別<br></b>
-        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"gender-select"}) %><br>
+        <%= @learn.gender.name %><br>
       </div>
 
       <div class="learn-box-1">
         <b>学びたい内容のタイトル<br></b>
-        <%= f.text_field :studytitle, class:"studytitle", placeholder:"（例）上手な採血も仕方について" %><br>
+        <%= @learn.studytitle %><br>
       </div>
 
       <div class="learn-box-1">
         <b>学びたい内容を記入して下さい<br></b>
-        <%= f.text_area :study, class:"text", placeholder:"（例）採血で５人に一人は失敗してしまいます。コツなどがあれば教えて欲しいです。" %><br>
+        <%= @learn.studytitle %><br>
       </div>
       <div class="learn-box-1">
-        <b>等道府県<br></b>
-        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %><br>
+        <b>都道府県<br></b>
+        <%= @learn.prefecture.name %><br>
       </div>
       <div class="learn-box-1">
         <b>場所の提供は？<br></b>
-        <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"area-select"}) %><br>
+        <%= @learn.area.name %><br>
       </div>
       <div class="learn-box-1">
         <b>場所の詳細情報<br></b>
-        <%= f.text_area :area_provided, class:"text", placeholder:"（例）◯◯市内のカフェなど" %><br>
+        <%= @learn.area_provided %><br>
       </div>
       <div class="learn-box-1">
         <b>教育を受ける側の一人あたりのお礼金<br></b>
-        <%= f.text_field :thankyou_money, class:"thankyou_money", placeholder:"（例）数字を入力（０でも可）" %><br>
+        <%= @learn.thankyou_money %><br>
       </div>
       <div class="learn-box-1">
         <b>教育を受ける側の人数<br></b>
-        <%= f.collection_select(:learn_num_id, LearnNum.all, :id, :name, {}, {class:"learn_num-select"}) %><br>
+        <%= @learn.learn_num.name %><br>
       </div>
       <div class="learn-box-1">
         <b>条件など（資料の提供、資材の提供など）<br></b>
-        <%= f.text_area :condition, class:"text", placeholder:"（例）実際に採血の手技を手ほどきして欲しい" %><br>
+        <%= @learn.condition %><br>
       </div>
 
-      <%= f.submit "投稿する" ,class:"btn" %>
+      <%= link_to('/learns/new', class: 'purchase-btn') do %>
+        <span class='purchase-btn-text'>編　集</span>
+        <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+      <% end %>
     </div>
   </div>
 <% end %> 
