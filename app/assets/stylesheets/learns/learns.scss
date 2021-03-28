@@ -109,26 +109,66 @@
 }
 
 .top-page-content1-form {
+  border-radius: 4%;
   display: flex;
-  background-color: silver;
+  background-color: rgb(184, 218, 188);
   padding: 20px 20px;
-  justify-content: space-around;
-  width: 90%;
+  justify-content: center;
+  width: 90vw;
+  flex-wrap: wrap;
   margin: 30px 40px 10px 40px;
 }
 
 .top-page-content1-1 {
+  border-radius: 4%;
+  border: 2px solid black;
   height: 300px;
   width: 300px;
-  background-color: salmon;
+  background-color: rgb(209, 207, 207);
   padding: 20px 20px;
+  margin: 10px 10px;
   font-size: 20px;
-  color: rgb(250, 243, 243);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-  background-image: image-url('saiketu.jpg');
+  color: rgb(12, 11, 11);
+ /* text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  background-image: image-url('saiketu.jpg');*/
 }
 
+.top-page-content1-studytitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.top-page-content1-job1 {
+  color: red;
+  font-size: 15px;
+}
+.top-page-content1-job2 {
+  color: rgb(2, 1, 1);
+  font-size: 15px;
+}
+
+.top-page-content1-study {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.top-page-content1-money {
+  text-align: center;
+  background-color: #3ccace;
+  border: 2px solid #f8f8f8;
+  border-radius: 10px;
+  width: 70%;
+  color: #fff;
+}
+.top-page-content1-money-form {
+  display: flex;
+  justify-content: center;
+}
+
+
+
 .top-page-content1-2 {
+  border-radius: 4%;
   height: 300px;
   width: 300px;
   background-color: salmon;
@@ -140,6 +180,7 @@
 }
 
 .top-page-content1-3 {
+  border-radius: 4%;
   height: 300px;
   width: 300px;
   background-color: salmon;
@@ -160,6 +201,7 @@
 }
 
 .top-page-content2-form {
+  border-radius: 4%;
   display: flex;
   background-color: rgb(24, 148, 206);
   padding: 20px 20px;
@@ -169,6 +211,7 @@
 }
 
 .top-page-content2-1 {
+  border-radius: 4%;
   height: 300px;
   width: 300px;
   background-color: rgb(114, 250, 159);
@@ -180,6 +223,7 @@
 }
 
 .top-page-content2-2 {
+  border-radius: 4%;
   height: 300px;
   width: 300px;
   background-color: rgb(114, 250, 159);
@@ -191,6 +235,7 @@
 }
 
 .top-page-content2-3 {
+  border-radius: 4%;
   height: 300px;
   width: 300px;
   background-color: rgb(114, 250, 159);
@@ -200,6 +245,31 @@
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
   background-image: image-url('opekyouiku.jpg');
 }
+
+
+.purchase-btn {
+  width: 120px;
+  background: #3ccace;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.purchase-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.purchase-btn-icon {
+  width: 60%;
+}
+
 
 
 
