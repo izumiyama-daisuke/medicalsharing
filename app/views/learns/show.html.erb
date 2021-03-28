@@ -1,0 +1,57 @@
+<%= form_with model: @learn, url:learns_path, local: true do |f| %>
+  <div class="learn-new-top">
+    <div class="learn-box">
+      <div class="learn-box-title">
+        <b>投稿詳細を表示する</b>
+      </div>
+      <div class="learn-box-1">
+        <b>あなたの職業<br></b>
+        <%= @learn.job.name %><br>
+      </div>
+
+      <div class="learn-box-1">
+        <b>性別<br></b>
+        <%= @learn.gender.name %><br>
+      </div>
+
+      <div class="learn-box-1">
+        <b>学びたい内容のタイトル<br></b>
+        <%= @learn.studytitle %><br>
+      </div>
+
+      <div class="learn-box-1">
+        <b>学びたい内容を記入して下さい<br></b>
+        <%= @learn.studytitle %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>都道府県<br></b>
+        <%= @learn.prefecture.name %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>場所の提供は？<br></b>
+        <%= @learn.area.name %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>場所の詳細情報<br></b>
+        <%= @learn.area_provided %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>教育を受ける側の一人あたりのお礼金<br></b>
+        <%= @learn.thankyou_money %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>教育を受ける側の人数<br></b>
+        <%= @learn.learn_num.name %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>条件など（資料の提供、資材の提供など）<br></b>
+        <%= @learn.condition %><br>
+      </div>
+
+      <%= link_to('/learns/new', class: 'purchase-btn') do %>
+        <span class='purchase-btn-text'>編　集</span>
+        <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+      <% end %>
+    </div>
+  </div>
+<% end %> 
