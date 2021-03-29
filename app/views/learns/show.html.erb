@@ -54,14 +54,14 @@
             <span class='purchase-btn-text'>編  集</span>
             <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
           <% end %>
-          <%= link_to(edit_learn_path(@learn), class: 'purchase-btn2') do %>
+          <%= link_to(learn_path(@learn), method: :delete, class: 'purchase-btn2') do %>
             <span class='purchase-btn-text'>削  除</span>
             <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
           <% end %>
         <% end %>
       <% end %>
 <%# フリマの参考コードーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
-  
+  <%#= link_to '削除', item_path(@item.id), method: :delete, class:'item-destroy' %>
 <%# フリマの参考コードーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
 
     </div>
