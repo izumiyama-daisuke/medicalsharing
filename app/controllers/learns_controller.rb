@@ -35,13 +35,13 @@ class LearnsController < ApplicationController
     end
   end
 
-#  def destroy
-#    if @item.user == current_user
-#      @item.destroy
-#      redirect_to root_path
-#    else
-#      render 'show'
-#    end
+  def destroy
+    if @learn.user == current_user
+      @learn.destroy
+      redirect_to root_path
+    else
+      render 'show'
+    end
 
   private
 
