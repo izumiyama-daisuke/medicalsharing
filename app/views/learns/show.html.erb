@@ -1,3 +1,5 @@
+<%= render "shared/header" %>
+
 <%= form_with model: @learn, url:learns_path, local: true do |f| %>
   <div class="learn-new-top">
     <div class="learn-box">
@@ -21,7 +23,7 @@
 
       <div class="learn-box-1">
         <b>学びたい内容を記入して下さい<br></b>
-        <%= @learn.studytitle %><br>
+        <%= @learn.study %><br>
       </div>
       <div class="learn-box-1">
         <b>都道府県<br></b>
@@ -47,7 +49,7 @@
         <b>条件など（資料の提供、資材の提供など）<br></b>
         <%= @learn.condition %><br>
       </div>
-      
+<%# 編集、削除ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
       <% if user_signed_in? %>
         <% if current_user.id == @learn.user_id %>
           <%= link_to(edit_learn_path(@learn), class: 'purchase-btn') do %>
@@ -60,9 +62,9 @@
           <% end %>
         <% end %>
       <% end %>
-<%# フリマの参考コードーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
-  
-<%# フリマの参考コードーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
+<%# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
+
+<%# 返信、チャットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
 
     </div>
   </div>
