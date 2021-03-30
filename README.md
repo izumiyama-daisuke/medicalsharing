@@ -71,7 +71,7 @@
 
 
 
-## learns テーブル(案を入力済み！！)(未実装)
+## learns テーブル
 
 | Column        | Type       | Options                       |
 | ------------- | ---------- | ----------------------------- |
@@ -88,6 +88,28 @@
 | user          | references | null: false,foreign_key: true |投稿者
 
 ### Association
+- belongs_to :user
+## relearns テーブル
+
+| Column        | Type       | Options                       |
+| ------------- | ---------- | ----------------------------- |
+| job_id        | integer    | null: false                   |職種
+| gender_id     | integer    | null: false                   |性別
+| studytitle    | string     | null: false                   |学びたい内容のタイトル
+| study         | text       | null: false                   |学びたい内容
+| prefecture_id | integer    | null: false                   |都道府県
+| area_id       | integer    | null: false                   |場所を提供する側
+| area_provided | text       |                               |場所の詳細など
+| thankyou_money| integer    |                               |お礼金
+| learn_num_id  | integer    | null: false                   |学びたい側の人数
+| condition     | text       |                               |条件
+
+| learn         | references | null: false,foreign_key: true |教えて投稿
+| user          | references | null: false,foreign_key: true |投稿者
+
+### Association
+- belongs_to :user
+
 
 
 ## teach テーブル(案を入力済み！！)(未実装)
