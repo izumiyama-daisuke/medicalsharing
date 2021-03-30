@@ -73,7 +73,7 @@
 
 ## learns テーブル(案を入力済み！！)(未実装)
 
-| Column        | Type       | Options                       |studytitle
+| Column        | Type       | Options                       |
 | ------------- | ---------- | ----------------------------- |
 | job_id        | integer    | null: false                   |職種
 | gender_id     | integer    | null: false                   |性別
