@@ -104,7 +104,7 @@
 | prefecture_id | integer    | null: false                   |都道府県
 | area_id       | integer    | null: false                   |場所を提供する側
 | area_provided | text       |                               |場所の詳細など
-| relearn_num_id| integer    | null: false                   |学びたい側の人数
+| learn_num_id  | integer    | null: false                   |教えたい側の人数
 | condition     | text       |                               |条件
 |               |            |                               |
 | learn         | references | null: false,foreign_key: true |教えて投稿
