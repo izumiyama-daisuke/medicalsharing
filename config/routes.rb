@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  get 'relearns/new'
   devise_for :users
   get 'learns/index'
   root to: "learns#index"
 
   resources :learns do
-    resources :relearns
+    resources :relearns, only: :new
   end
   
 
