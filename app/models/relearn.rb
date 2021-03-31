@@ -1,0 +1,2 @@
+class Relearn < ApplicationRecord
+end
