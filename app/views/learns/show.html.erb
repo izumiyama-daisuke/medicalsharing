@@ -52,7 +52,7 @@
 <%# 教える投稿、チャットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
       <% if user_signed_in? %>
         <% if current_user.id != @learn.user_id %>
-          <%= link_to(learn_path(@learn), class: 'purchase-btn3') do %>
+          <%= link_to(new_learn_relearn_path(@learn), class: 'purchase-btn3') do %>
             <span class='purchase-btn-text'>教える</span>
             <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
           <% end %>
