@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: "learns#index"
 
   resources :learns do
-    resources :relearns, only: :new
+    resources :relearns, only: [:new, :create]
   end
   
 
