@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_25_040109) do
+ActiveRecord::Schema.define(version: 2021_03_31_041836) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -50,6 +50,24 @@ ActiveRecord::Schema.define(version: 2021_03_25_040109) do
     t.index ["user_id"], name: "index_learns_on_user_id"
   end
 
+  create_table "relearns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "job_id", null: false
+    t.integer "gender_id", null: false
+    t.string "restudytitle", null: false
+    t.text "restudy", null: false
+    t.integer "prefecture_id", null: false
+    t.integer "area_id", null: false
+    t.text "area_provided"
+    t.integer "learn_num_id", null: false
+    t.text "condition"
+    t.bigint "learn_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["learn_id"], name: "index_relearns_on_learn_id"
+    t.index ["user_id"], name: "index_relearns_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -70,4 +88,6 @@ ActiveRecord::Schema.define(version: 2021_03_25_040109) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "learns", "users"
+  add_foreign_key "relearns", "learns"
+  add_foreign_key "relearns", "users"
 end
