@@ -1,6 +1,6 @@
 class LearnsController < ApplicationController
   def index
-    @learns = Learn.all
+    @learns = Learn.all.includes(:user).order("created_at DESC")
   end
 
   def new
