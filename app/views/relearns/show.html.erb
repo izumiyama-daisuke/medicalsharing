@@ -67,7 +67,7 @@
     <% @relearns.each do |relearn| %>
     <% if relearn.learn.id.to_i == params[:id].to_i %>
      <div class="learn-list-show">       <%# 一つの投稿の外枠 %>
-      <%= link_to learn_relearn_path(relearn.id) do %>    <%# 詳細ページへリンク %>
+      <%= link_to learn_relearn_path(relearn.id) do %>     <%# 詳細ページへリンク %>
         <div class="#" >
           <div class="#">投稿者：
             <span class="relearn-job-name"><%= relearn.job.name.truncate(10) %></span>
@@ -90,6 +90,57 @@
 </div>
 <%#-----------------  right-block   --------------------%>
 <div class="right-block">
+
+  <%= form_with model: @learn, url:learns_path, local: true do |f| %>
+  <div class="learn-new-top">
+    <div class="learn-boxx">
+      <div class="learn-box-title-show">
+        <b>投稿の内容</b>
+      </div>
+      <div class="learn-box-1">
+        <b>あなたの職業<br></b>
+        <%= @relearn.job.name %><br>
+      </div>
+
+      <div class="learn-box-1">
+        <b>性別<br></b>
+        <%= @relearn.gender.name %><br>
+      </div>
+
+      <div class="learn-box-1">
+        <b>学びたい内容のタイトル<br></b>
+        <%= @relearn.restudytitle %><br>
+      </div>
+
+      <div class="learn-box-1">
+        <b>学びたい内容を記入して下さい<br></b>
+        <%= @relearn.restudy %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>都道府県<br></b>
+        <%= @relearn.prefecture.name %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>場所の提供は？<br></b>
+        <%= @relearn.area.name %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>場所の詳細情報<br></b>
+        <%= @relearn.area_provided %><br>
+      </div>
+      
+      <div class="learn-box-1">
+        <b>教育を受ける側の人数<br></b>
+        <%= @relearn.learn_num.name %><br>
+      </div>
+      <div class="learn-box-1">
+        <b>条件など（資料の提供、資材の提供など）<br></b>
+        <%= @relearn.condition %><br>
+      </div>
+    </div>
+  </div>
+<% end %> 
+
 </div>
 
 

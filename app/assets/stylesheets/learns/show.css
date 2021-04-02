@@ -44,7 +44,6 @@
 /*-----------------  center-block   --------------------*/
 .center-block {
   width: 30%;
-  height: 100vh;
   background-color: lightpink;
   padding: 50px 0 0 0;
 }
@@ -101,8 +100,10 @@
 /*-----------------  right-block    --------------------*/
 .right-block {
   width: 30%;
-  height: 100vh;
+  
   background-color: rgb(202, 214, 226);
+
+  
 }
 /*-------------------------------------*/
 /*-----------------  right-menu-block    --------------------*/
