@@ -1,12 +1,11 @@
+
 <%= render "shared/header" %>
-<div class="show-three-block">
-<%#-----------------  left-block   --------------------%>
-<div class="left-block">
-  <%= form_with model: @learn, url:learns_path, local: true do |f| %>
+
+<%= form_with model: @learn, url:learns_path, local: true do |f| %>
   <div class="learn-new-top">
-    <div class="learn-boxx">
-      <div class="learn-box-title-show">
-        <b>投稿の内容</b>
+    <div class="learn-box">
+      <div class="learn-box-title">
+        <b>投稿詳細を表示する</b>
       </div>
       <div class="learn-box-1">
         <b>あなたの職業<br></b>
@@ -51,54 +50,11 @@
         <b>条件など（資料の提供、資材の提供など）<br></b>
         <%= @learn.condition %><br>
       </div>
-    </div>
-  </div>
-<% end %> 
-
-</div>
-<%#-----------------  center-block   --------------------%>
-<div class="center-block">
-  <div class="learn-box-title-show-center">
-    <b>返信の投稿</b>
-  </div>
-
-
-<%#-----------------  お試し中   --------------------%>
-    <% @relearns.each do |relearn| %>
-    <% if relearn.learn.id.to_i == params[:id].to_i %>
-     <div class="learn-list-show">       <%# 一つの投稿の外枠 %>
-      <%#= link_to learn_path(relearn.id) do %>    <%# 詳細ページへリンク %>
-        <div class="#" >
-          <div class="#">投稿者：
-            <span class="relearn-job-name"><%= relearn.job.name %></span>
-            <span class="relearn-job-name">( <%= relearn.user.nickname %> さん)</span>
-          </div> 
-          <div class="#">タイトル：
-            <span class="relearn-dtudytitle"><%= relearn.restudytitle.truncate(19) %></span>
-          </div> 
-          <div class="#">本文：
-            <span class="relearn-dtudytitle"><%= relearn.restudy.truncate(21) %></span>
-          </div> 
-        </div>
-      <%# end %>
-     </div>
-    <% end %>
-  <% end %>
-<%#-----------------  お試し中   --------------------%>
-
-
-</div>
-<%#-----------------  right-block   --------------------%>
-<div class="right-block"></div>
-
-
-<%#-----------------  right-menu-block   --------------------%>
-<div class="right-menu-block"></div>
-
 <%# 教える投稿、チャットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
       <% if user_signed_in? %>
-        <%# if current_user.id != @learn.user_id %>
-          <%= link_to(new_learn_relearn_path(@learn), class: 'purchase-btn3') do %>
+        <% if current_user.id != @learn.user_id %>
+          <%= link_to(new_learn_relearn
+          _path(@learn), class: 'purchase-btn3') do %>
             <span class='purchase-btn-text'>教える</span>
             <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
           <% end %>
@@ -106,12 +62,12 @@
             <span class='purchase-btn-text'>チャット</span>
             <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
           <% end %>
-        <%# end %>
+        <% end %>
       <% end %>
 <%# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
 <%# 編集、削除ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
       <% if user_signed_in? %>
-        <%# if current_user.id == @learn.user_id %>
+        <% if current_user.id == @learn.user_id %>
           <%= link_to(edit_learn_path(@learn), class: 'purchase-btn') do %>
             <span class='purchase-btn-text'>編  集</span>
             <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
@@ -120,6 +76,12 @@
             <span class='purchase-btn-text'>削  除</span>
             <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
           <% end %>
-        <%# end %>
+        <% end %>
       <% end %>
 <%# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
+
+<%# 返信、チャットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
+
+    </div>
+  </div>
+<% end %> 

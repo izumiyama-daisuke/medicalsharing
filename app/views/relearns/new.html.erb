@@ -26,7 +26,7 @@
         <%= f.text_area :restudy, class:"text", placeholder:"（例）上手に採血するコツは血管の探し方にあります。" %><br>
       </div>
       <div class="learn-box-1">
-        <b>等道府県<br></b>
+        <b>都道府県<br></b>
         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %><br>
       </div>
       <div class="learn-box-1">

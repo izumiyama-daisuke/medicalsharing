@@ -4,24 +4,42 @@
 }
 /* 依頼登録画面の外枠 */
 .learn-new-top {
-  width: 100vw;
+  
   display: flex;
   justify-content: center;
-  padding: 30px 0px;
   
 }
 
 .learn-box {
   background-color: lightcyan;
-  width: 600px;
-  padding: 50px; 
+  width: 90%;
+  padding: 30px 0px 30px 70px; 
 }
 
+
+/*-------------吹き出しタイトル--------------------------*/
 .learn-box-title {
-  font-size: 35px;
-  justify-content: center;
+  position: relative;
+  padding: 1.5rem 2rem;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 10px;
+  background: #094;
+  width: 300px;
 }
 
+.learn-box-title:before {
+  position: absolute;
+  bottom: -9px;
+  left: 1em;
+  width: 0;
+  height: 0;
+  content: '';
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: #094 transparent transparent transparent;
+}
+/*---------------------------------------*/
 .learn-box-1 {
   margin: 20px 0px;
 }

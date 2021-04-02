@@ -4,7 +4,7 @@
   <div class="learn-new-top">
     <div class="learn-box">
       <div class="learn-box-title">
-        <b>投稿を入力する</b>
+        <b>投稿を入力</b>
       </div>
       <div class="learn-box-1">
         <b>あなたの職業<br></b>
@@ -26,7 +26,7 @@
         <%= f.text_area :study, class:"text", placeholder:"（例）採血で５人に一人は失敗してしまいます。コツなどがあれば教えて欲しいです。" %><br>
       </div>
       <div class="learn-box-1">
-        <b>等道府県<br></b>
+        <b>都道府県<br></b>
         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %><br>
       </div>
       <div class="learn-box-1">

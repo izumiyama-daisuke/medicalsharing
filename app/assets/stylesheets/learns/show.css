@@ -2,37 +2,114 @@
 * {
   box-sizing: border-box;
 }
-/* 依頼詳細画面の外枠 */
-.learn-new-top {
-  width: 100vw;
+
+.show-three-block {
   display: flex;
-  justify-content: center;
-  padding: 30px 0px;
-  
 }
 
-.learn-box {
-  background-color: rgb(109, 219, 109);
-  width: 600px;
-  padding: 50px; 
+/*-----------------  left-block   --------------------*/
+.left-block {
+  width: 30%;
+  padding: 25px 10px 10px 20px;
+  background-color: lightgreen;
 }
 
-.learn-box-title {
-  font-size: 35px;
-  justify-content: center;
+/*-------------左の吹き出しタイトル--------------------------*/
+.learn-box-title-show {
+  position: relative;
+  padding: 1.5rem 2rem;
+  margin-left: 40px;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 10px;
+  background: rgb(79, 20, 241);
+  width: 300px;
 }
 
-.learn-box-1 {
-  margin: 20px 0px;
+.learn-box-title-show:before {
+  position: absolute;
+  bottom: -9px;
+  left: 1em;
+  width: 0;
+  height: 0;
+  content: '';
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: rgb(79, 20, 241) transparent transparent transparent;
+}
+/*---------------------------------------*/
+/*-------------------------------------*/
+
+
+/*-----------------  center-block   --------------------*/
+.center-block {
+  width: 30%;
+  height: 100vh;
+  background-color: lightpink;
+  padding: 50px 0 0 0;
+}
+/*-----------------  返信の投稿の飾り   --------------------*/
+.learn-list-show {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px 20px;
+  padding: 5px;
+  background-color: blanchedalmond;
+
+  transition: box-shadow 2s ease-out, transform 2s ease-out;
 }
 
-.job-select, .gender-select, .text, .prefecture-select, .area-select, .thankyou_money, .learn_num-select, .studytitle {
-  width: 90%;
-  height: 30px;
+.learn-list-show:hover {
+  box-shadow: 0 15px 10px 5px rgb(0, 0, 0);
+  transform: translateY(-10px);
+}
+/*-----------------  --------------  --------------------*/
+.relearn-job-name {
+  color: red;
+}
+/*-------------真ん中の吹き出しタイトル--------------------------*/
+.learn-box-title-show-center {
+  position: relative;
+  padding: 1rem 2rem;
+  margin: 0 0 0 34px;
+  font-size: 30px;
+  text-align: center;
+  color: #0075a9;
+  border-radius: 0 10px 10px 10px;
+  background: #d8ecf5;
+  width: 350px;
 }
 
-.text {
-  height: 100px;
+.learn-box-title-show-center:before {
+  font-family: 'Font Awesome 5 Free';
+  font-size: 15px;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -24px;
+  left: 0;
+  height: 24px;
+  padding: 0 1em;
+  content: '\f0a4  POINT';
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  background: #0075a9;
+}
+/*---------------------------------------*/
+/*-------------------------------------*/
+
+
+/*-----------------  right-block    --------------------*/
+.right-block {
+  width: 30%;
+  height: 100vh;
+  background-color: rgb(202, 214, 226);
+}
+/*-------------------------------------*/
+/*-----------------  right-menu-block    --------------------*/
+.right-menu-block {
+  width: 10%;
+  height: 100vh;
+  background-color: rgb(253, 253, 253);
 }
 
 /*--------------------------------*/
@@ -42,9 +119,11 @@
   text-align: center;
   border-radius: 4%;
   bottom: 170px;
-  right: 32px;
+  right: 10px;
   position: fixed;
   padding: 15px;
+
+  transition: box-shadow 2s ease-out, transform 2s ease-out;
 }
 /*--------------------------------*/
 .purchase-btn3 {
@@ -53,9 +132,11 @@
   text-align: center;
   border-radius: 4%;
   bottom: 305px;
-  right: 32px;
+  right: 10px;
   position: fixed;
   padding: 15px;
+
+  transition: box-shadow 2s ease-out, transform 2s ease-out;
 }
 /*--------------------------------*/
 .purchase-btn4 {
@@ -64,9 +145,11 @@
   text-align: center;
   border-radius: 4%;
   bottom: 440px;
-  right: 32px;
+  right: 10px;
   position: fixed;
   padding: 15px;
+
+  transition: box-shadow 2s ease-out, transform 2s ease-out;
 }
 
 .purchase-btn-text {
@@ -79,4 +162,36 @@
 
 .purchase-btn-icon {
   width: 60%;
+}
+
+/*----------------ボタンの影装飾---------------------*/
+.purchase-btn:hover {
+  box-shadow: 0 15px 10px 5px rgb(0, 0, 0);
+  transform: translateY(-10px);
+}
+.purchase-btn2:hover {
+  box-shadow: 0 15px 10px 5px rgb(0, 0, 0);
+  transform: translateY(-10px);
+}
+.purchase-btn3:hover {
+  box-shadow: 0 15px 10px 5px rgb(0, 0, 0);
+  transform: translateY(-10px);
+}
+.purchase-btn4:hover {
+  box-shadow: 0 15px 10px 5px rgb(0, 0, 0);
+  transform: translateY(-10px);
+}
+
+/*-------------------------------------*/
+.purchase-btn {
+  width: 120px;
+  background: #3ccace;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 10px;
+  position: fixed;
+  padding: 15px;
+
+  transition: box-shadow 2s ease-out, transform 2s ease-out;
 }

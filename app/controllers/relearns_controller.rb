@@ -6,7 +6,6 @@ class RelearnsController < ApplicationController
 
   def create
     @relearn = Relearn.create(relearn_params)
-binding.pry
     if @relearn.save
       redirect_to root_path
     else
