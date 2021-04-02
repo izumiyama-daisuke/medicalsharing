@@ -9,4 +9,5 @@ class Gender < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :learns
+  has_many :relearns
 end

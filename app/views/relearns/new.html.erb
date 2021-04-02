@@ -1,10 +1,10 @@
 <%= render "shared/header" %>
 
-<%= form_with model: @learn, url:learns_path, local: true do |f| %>
+<%= form_with model: @relearn, url:learn_relearns_path, local: true do |f| %>
   <div class="learn-new-top">
     <div class="learn-box">
       <div class="learn-box-title">
-        <b>投稿を入力</b>
+        <b>投稿を入力する</b>
       </div>
       <div class="learn-box-1">
         <b>あなたの職業<br></b>
@@ -17,13 +17,13 @@
       </div>
 
       <div class="learn-box-1">
-        <b>学びたい内容のタイトル<br></b>
-        <%= f.text_field :studytitle, class:"studytitle", placeholder:"（例）上手な採血も仕方について" %><br>
+        <b>教えたい内容のタイトル<br></b>
+        <%= f.text_field :restudytitle, class:"studytitle", placeholder:"（例）上手な採血も仕方について" %><br>
       </div>
 
       <div class="learn-box-1">
-        <b>学びたい内容を記入して下さい<br></b>
-        <%= f.text_area :study, class:"text", placeholder:"（例）採血で５人に一人は失敗してしまいます。コツなどがあれば教えて欲しいです。" %><br>
+        <b>教えたい内容（詳細）を記入して下さい<br></b>
+        <%= f.text_area :restudy, class:"text", placeholder:"（例）上手に採血するコツは血管の探し方にあります。" %><br>
       </div>
       <div class="learn-box-1">
         <b>都道府県<br></b>
@@ -37,12 +37,9 @@
         <b>場所の詳細情報<br></b>
         <%= f.text_area :area_provided, class:"text", placeholder:"（例）◯◯市内のカフェなど" %><br>
       </div>
+      
       <div class="learn-box-1">
-        <b>教育を受ける側の一人あたりのお礼金<br></b>
-        <%= f.text_field :thankyou_money, class:"thankyou_money", placeholder:"（例）数字を入力（０でも可）" %><br>
-      </div>
-      <div class="learn-box-1">
-        <b>教育を受ける側の人数<br></b>
+        <b>教育をする側の人数<br></b>
         <%= f.collection_select(:learn_num_id, LearnNum.all, :id, :name, {}, {class:"learn_num-select"}) %><br>
       </div>
       <div class="learn-box-1">

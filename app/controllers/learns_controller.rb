@@ -1,6 +1,6 @@
 class LearnsController < ApplicationController
   def index
-    @learns = Learn.all
+    @learns = Learn.all.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -19,6 +19,7 @@ class LearnsController < ApplicationController
 
   def show
     @learn = Learn.find(params[:id])
+    @relearns = Relearn.all.includes(:user).order("created_at DESC")
   end
 
   def edit
@@ -35,13 +36,16 @@ class LearnsController < ApplicationController
     end
   end
 
-#  def destroy
-#    if @item.user == current_user
-#      @item.destroy
-#      redirect_to root_path
-#    else
-#      render 'show'
-#    end
+
+  def destroy
+    @learn = Learn.find(params[:id])
+    if @learn.user == current_user
+      @learn.destroy
+      redirect_to root_path
+    else
+      render 'show'
+    end
+  end
 
   private
 
@@ -50,3 +54,4 @@ class LearnsController < ApplicationController
                                   :learn_num_id, :condition).merge(user_id: current_user.id)
   end
 end
+
