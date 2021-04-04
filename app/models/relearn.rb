@@ -25,7 +25,7 @@ class Relearn < ApplicationRecord
     validates :job_id
     validates :learn_num_id
     validates :prefecture_id
-
+  end
 
 
 
