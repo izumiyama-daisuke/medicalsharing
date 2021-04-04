@@ -17,7 +17,7 @@ class Learn < ApplicationRecord
     validates :study
   end
 
-  validates :thankyou_money, inclusion: { in: 1..10_000 }
+  #validates :thankyou_money, inclusion: { in: 0..100_000 }
 
   # ジャンルの選択が「--」の時は保存できないようにする
   with_options numericality: { other_than: 1 } do
@@ -28,4 +28,3 @@ class Learn < ApplicationRecord
     validates :prefecture_id
   end
 end
-
