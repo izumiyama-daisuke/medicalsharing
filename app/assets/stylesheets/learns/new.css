@@ -53,3 +53,12 @@
   height: 100px;
 }
 
+.hissu {
+  background-color: red;
+  color: white;
+  border-radius: 4%;
+  text-align: center;
+  display: block;
+  width: 180px;
+}
+

@@ -7,30 +7,37 @@
         <b>投稿を入力</b>
       </div>
       <div class="learn-box-1">
-        <b>あなたの職業<br></b>
+        <b>あなたの職業</b>
+        <span class="hissu">必 須</span>
+        
         <%= f.collection_select(:job_id, Job.all, :id, :name, {}, {class:"job-select"}) %><br>
       </div>
 
       <div class="learn-box-1">
-        <b>性別<br></b>
+        <b>性別</b>
+        <span class="hissu">必 須</span>
         <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"gender-select"}) %><br>
       </div>
 
       <div class="learn-box-1">
         <b>学びたい内容のタイトル<br></b>
+        <span class="hissu">必 須</span>
         <%= f.text_field :studytitle, class:"studytitle", placeholder:"（例）上手な採血も仕方について" %><br>
       </div>
 
       <div class="learn-box-1">
         <b>学びたい内容を記入して下さい<br></b>
+        <span class="hissu">必 須</span>
         <%= f.text_area :study, class:"text", placeholder:"（例）採血で５人に一人は失敗してしまいます。コツなどがあれば教えて欲しいです。" %><br>
       </div>
       <div class="learn-box-1">
         <b>都道府県<br></b>
+        <span class="hissu">必 須</span>
         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %><br>
       </div>
       <div class="learn-box-1">
         <b>場所の提供は？<br></b>
+        <span class="hissu">必 須</span>
         <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"area-select"}) %><br>
       </div>
       <div class="learn-box-1">
@@ -43,6 +50,7 @@
       </div>
       <div class="learn-box-1">
         <b>教育を受ける側の人数<br></b>
+        <span class="hissu">必 須</span>
         <%= f.collection_select(:learn_num_id, LearnNum.all, :id, :name, {}, {class:"learn_num-select"}) %><br>
       </div>
       <div class="learn-box-1">
