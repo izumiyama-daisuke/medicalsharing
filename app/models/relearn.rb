@@ -14,8 +14,6 @@ class Relearn < ApplicationRecord
   with_options presence: true do
     validates :restudytitle
     validates :restudy
-    validates :area_provided
-    validates :condition
   end
 
   # ジャンルの選択が「--」の時は保存できないようにする
@@ -26,7 +24,5 @@ class Relearn < ApplicationRecord
     validates :learn_num_id
     validates :prefecture_id
   end
-
-
 
 end
