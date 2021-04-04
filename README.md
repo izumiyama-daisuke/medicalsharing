@@ -27,7 +27,7 @@
 
 
 
-# テーブル設計（まだ未設計です）
+# テーブル設計
 
 ## users テーブル
 
@@ -45,32 +45,9 @@
 ### Association
 - has_many :relearns
 - has_many :learns
-
-
-## room_users テーブル(未実装)
-
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
-
-
-## rooms テーブル(未実装)
-
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
-
-### Association
-
 - has_many :room_users
-- has_many :users, through: room_users
-
+- has_many :rooms, through: room_users
+- has_many :messages
 
 
 ## learns テーブル
@@ -93,6 +70,7 @@
 - belongs_to :user
 - has_many :relearns
 
+
 ## relearns テーブル
 
 | Column        | Type       | Options                       |
@@ -112,6 +90,48 @@
 
 ### Association
 - belongs_to :user
+- belongs_to :learn
+
+
+
+
+## room_users テーブル(未実装)
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| room   | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :room
+- belongs_to :user
+
+
+## rooms テーブル(未実装)
+
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
+
+### Association
+- belongs_to :learn
+- has_many :room_users
+- has_many :users, through: room_users
+
+
+## messages テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | string     |                                |
+| user    | references | null: false, foreign_key: true |
+| room    | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :room
+- belongs_to :user
+
+
 
 
 
@@ -133,7 +153,7 @@
 
 
 
-
+###################################   以下参考用    ####################################
 
 
 - has_many :room_users
