@@ -10,7 +10,8 @@
 
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :ニックネーム%>
+            <p><%= f.label :ニックネーム%></p>
+            <p class="hissu">必須</p>
           </div>
           <div class='field-input'>
             <%= f.text_field :nickname, autofocus: true%>
@@ -20,6 +21,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :姓%>
+            <p class="hissu">必須</p>
           </div>
           <div class='field-input'>
             <%= f.text_field :first_name, autofocus: true%>
@@ -29,6 +31,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :名%>
+            <p class="hissu">必須</p>
           </div>
           <div class='field-input'>
             <%= f.text_field :last_name, autofocus: true%>
@@ -38,6 +41,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :姓（カタカナ）%>
+            <p class="hissu">必須</p>
           </div>
           <div class='field-input'>
             <%= f.text_field :first_kana, autofocus: true%>
@@ -47,6 +51,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :名（カタカナ）%>
+            <p class="hissu">必須</p>
           </div>
           <div class='field-input'>
             <%= f.text_field :last_kana, autofocus: true%>
@@ -56,6 +61,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :生年月日%>
+            <p class="hissu">必須</p>
           </div>
           <div class='input-birth-wrap'>
             <%= raw sprintf(
@@ -79,6 +85,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :email%>
+            <p class="hissu">必須</p>
           </div>
           <div class='field-input'>
             <%= f.email_field :email%>

@@ -30,4 +30,3 @@ class Relearn < ApplicationRecord
 
 
 end
-
