@@ -1,7 +1,7 @@
 # README
 
 ## app name
-  medishar[メディシェア]  
+  medishar[メディシェア]<br>
   medicalsharing
 
 ## app info
