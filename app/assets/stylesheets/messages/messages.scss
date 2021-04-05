@@ -7,13 +7,23 @@
 .chat-side-bar {
   background-color: aquamarine;
   width: 20vw;
-  height: 100vh;
+  height: 83vh;
 }
 // メイン画面ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー//
 .chat-main-form {
-background-color: bisque;
 width: 80vw;
-height:100vh;
+height:83vh;
+}
+
+.chat-main-top {
+  background-color: bisque;
+  width: 100%;
+  height: 85%;
+}
+.chat-main-bottom {
+  background-color: rgb(25, 152, 236);
+  width: 100%;
+  height: 15%;
 }
 // 参考用ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー//
 
