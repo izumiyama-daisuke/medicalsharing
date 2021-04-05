@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'messages/index'
   get 'relearns/new'
   devise_for :users
   get 'learns/index'
