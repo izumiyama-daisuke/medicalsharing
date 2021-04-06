@@ -1,1 +1,33 @@
-<div class="chat-side-bar">サイドバー</div>
+<div class="chat-side-bar">
+  <div class="chat-side-ber-toptitle">
+    <p class="chat-side-ber-toptitle-text">チャットルーム</p>
+  </div>
+  <div class="chat-side-ber-toptitle1">
+      <p class="chat-side-ber-toptitle-text1">なになにさんの投稿にチャット</p>
+  </div>
+  <%#-----------------  left-block   --------------------%>
+
+  <% @learns.each do |learn| %>
+    <div class="learn-list">
+    <% if learn.id == @learn.id %><%#-----------------  test   --------------------%>
+      <%= link_to learn_path(learn.id) do %>    <%# 詳細ページへリンク %>
+        <div class="top-page-content1-1" >       <%# 一つの投稿の外枠 %>
+          <p class="top-page-content1-studytitle"><%= learn.studytitle.truncate(12) %></p>
+          <span class="top-page-content1-job2">投稿者：
+            <span class="top-page-content1-job1"><%= learn.job.name %></span>
+          </span>
+          <p class="top-page-content1-study"><%= learn.study.truncate(80) %></p>
+          <% if learn.thankyou_money != 0 && learn.thankyou_money != nil %>
+            <div class="top-page-content1-money-form">
+              <p class="top-page-content1-money">お礼金 <%= learn.thankyou_money.truncate(7) %>円</p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %><%#-----------------  test   --------------------%>
+    </div>
+  <% end %>
+
+<%#-----------------  center-block   --------------------%>
+
+</div>
