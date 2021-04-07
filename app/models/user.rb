@@ -4,6 +4,8 @@ class User < ApplicationRecord
 
   has_many :learns
   has_many :relearns
+  has_many :room_users
+  has_many :rooms, through: :room_users
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
