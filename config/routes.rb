@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :learns do
     resources :relearns, only: [:new, :create, :show]
     resources :messages, only: [:index]
+    resources :rooms, only: [:new, :create]
   end
   
 
