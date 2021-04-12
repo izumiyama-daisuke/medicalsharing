@@ -2,9 +2,7 @@
   <div class="chat-side-ber-toptitle">
     <p class="chat-side-ber-toptitle-text">チャットルーム</p>
   </div>
-  <div class="chat-side-ber-toptitle1">
-      <p class="chat-side-ber-toptitle-text1">なになにさんの投稿にチャット</p>
-  </div>
+
   <%#-----------------  left-block   --------------------%>
 
   <% @learns.each do |learn| %>
@@ -27,7 +25,20 @@
     <% end %><%#-----------------  test   --------------------%>
     </div>
   <% end %>
-
-<%#-----------------  center-block   --------------------%>
+<%#-----------------  --------------------%>
+  <div class="chat-side-ber-toptitle1">
+      <p class="chat-side-ber-toptitle-text1">なになにさんの投稿にチャット</p>
+  </div>
+  <%#----------------- カリキュラムコピールーム名を表示 --------------------%>
+  <div class="rooms">
+  <% current_user.rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <%#= link_to room.name, room_messages_path(room) %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+<%#-----------------   --------------------%>
 
 </div>
