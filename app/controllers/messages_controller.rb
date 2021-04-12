@@ -6,7 +6,6 @@ class MessagesController < ApplicationController
 
     ####roomコントローラーにも同じコードを記載しています  不要か？
     @message = Message.new     ####roomコントローラーにも同じコードを記載しています  不要か？
-    #@room = Room.find(params[:room_id])
     @room = Room.new
   end
 

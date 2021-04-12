@@ -34,7 +34,7 @@
   <% current_user.rooms.each do |room| %>
     <div class="room">
       <div class="room-name">
-        <%#= link_to room.name, room_messages_path(room) %>
+        <%= link_to room.name, learn_room_messages_path(room) %><%#---編集が必要です---%>
       </div>
     </div>
   <% end %>

@@ -8,7 +8,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to new_learn_room_path
+      redirect_to learn_room_messages_path(room_id: @room.id)
     else
       render :new
     end
