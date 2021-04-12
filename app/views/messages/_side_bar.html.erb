@@ -26,15 +26,17 @@
     </div>
   <% end %>
 <%#-----------------  --------------------%>
+  <%= link_to(new_learn_room_path(@learn, @learn.id)) do %>
   <div class="chat-side-ber-toptitle1">
-      <p class="chat-side-ber-toptitle-text1">なになにさんの投稿にチャット</p>
+      <p class="chat-side-ber-toptitle-text1">新規チャットルームを作成</p>
   </div>
+  <% end %>
   <%#----------------- カリキュラムコピールーム名を表示 --------------------%>
   <div class="rooms">
   <% current_user.rooms.each do |room| %>
     <div class="room">
       <div class="room-name">
-        <%= link_to room.name, learn_room_messages_path(room) %><%#---編集が必要です---%>
+        <%= link_to room.name, learn_room_messages_path(room_id: room.id) %>
       </div>
     </div>
   <% end %>

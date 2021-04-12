@@ -68,6 +68,7 @@
     <% if relearn.learn.id.to_i == params[:id].to_i %>
      <div class="learn-list-show">       <%# 一つの投稿の外枠 %>
       <%= link_to learn_relearn_path(relearn.id) do %>     <%# 詳細ページへリンク %>
+      <%#= link_to(new_learn_room_path(@learn.id), class: 'purchase-btn4') do %>
         <div class="#" >
           <div class="#">投稿者：
             <span class="relearn-job-name"><%= relearn.job.name.truncate(10) %></span>
