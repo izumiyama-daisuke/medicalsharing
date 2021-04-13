@@ -6,24 +6,23 @@
   <br>------<br>------<br>------<br>------<br>------<br>------<br>------<br>------
   <br>------<br>------<br>------<br>------<br>------<br>------<br>------<br>------エンド
   </div>
-
+  
   <div class="chat-main-bottom">
+   <% if params[:room_id].to_i != 0 %><%# チャット相手を洗濯しないと入力欄を非表示 %>
     <div class="form">
-     <%#= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+     <%= form_with model: [@room, @message], url: learn_room_messages_path, class: 'form', local: true do |f| %>
       <div class="form-input">
-        <%#= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
-      <%#  <input class="form-message" placeholder= "type a message"> %>
+        <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
         <label class="form-image">
           <span class="image-file">画像</span>
-       <%#    <input type="file" class="hidden"> %>
-          <%#= f.file_field :image, class: 'hidden' %>
+          <%= f.file_field :image, class: 'hidden' %>
         </label>
       </div>
-      <div class="">
-        <%#= f.submit '送信', class: 'form-submit' %>
-       <%# <input class="form-submit" type="submit" value="送信"> %>
+      <div>
+        <%= f.submit '送信', class: 'form-submit' %>
       </div>
-     <%# end %>
+     <% end %>
     </div>
+   <% end %>
   </div>
 </div>

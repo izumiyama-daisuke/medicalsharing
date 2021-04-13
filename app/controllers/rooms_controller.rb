@@ -18,6 +18,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:name, user_ids: []).merge(room_id: @room.id)
+    params.require(:room).permit(:name, user_ids: [])#.merge(room_id: @room.id)いらない、あとで消す
   end
 end

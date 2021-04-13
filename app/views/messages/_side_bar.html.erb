@@ -12,6 +12,9 @@
         <div class="top-page-content1-1" >       <%# 一つの投稿の外枠 %>
           <p class="top-page-content1-studytitle"><%= learn.studytitle.truncate(12) %></p>
           <span class="top-page-content1-job2">投稿者：
+            <span class="top-page-content1-job1"><%= learn.user.nickname %></span><br>
+          </span>
+          <span class="top-page-content1-job2">職　業：
             <span class="top-page-content1-job1"><%= learn.job.name %></span>
           </span>
           <p class="top-page-content1-study"><%= learn.study.truncate(80) %></p>
@@ -31,7 +34,7 @@
       <p class="chat-side-ber-toptitle-text1">新規チャットルームを作成</p>
   </div>
   <% end %>
-  <%#----------------- カリキュラムコピールーム名を表示 --------------------%>
+  <%#----------------- ルーム名を表示 --------------------%>
   <div class="rooms">
   <% current_user.rooms.each do |room| %>
     <div class="room">
