@@ -9,19 +9,18 @@ class MessagesController < ApplicationController
     #@room = Room.new
     @message = Message.new
     @room = Room.new
-    
-    #if params[:room_id] != 0
-    #  @room = Room.new
-    #else
-    #  @room = Room.find(params[:room_id])
-    #end
-    #@@room = Room.find(room_id: @room.id)
   end
 
   def create
+    @learn = Learn.find(params[:learn_id])
     @room = Room.find(params[:room_id])
     @message = @room.messages.new(message_params)
-    @message.save
+    
+    if @message.save
+      redirect_to learn_room_messages_path(@learn, @room)
+    else
+      render :index
+    end
   end
 
   private
