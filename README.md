@@ -1,10 +1,11 @@
 # README
 
 ## app name
-   medishar[メディシェア]   medicalsharing
+  medishar[メディシェア]<br>
+  medicalsharing
 
 ## app info
-   個人間で医療情報を共有できます。ターゲットは資格取得後の医療従事者とベテラン医療従事者の【学びたい】、【教えたい】を結ぶAPPです。
+   個人間で医療情報を共有できます。ターゲットは資格取得後の医療従事者とベテラン医療従事者の【学びたい】、【教えたい】を結ぶAPPです。  
    初学者は比較的定額にてベテランから教えを受けることができます。ベテラン医療従事者はお小遣い稼ぎで知識や技術を提供できます。どちらにもメリットはあります。
 
 ## URL
@@ -17,9 +18,9 @@
    ID : admin  PS : 0000
 
 ## 利用方法
-   *初学者は学びたい内容を投稿できます。経験者から返事が来るのを待ちます。
-   *経験者は教えたい内容を投稿できます。投稿を見た初学者から教育の依頼が来るのを待ちます。
-   *初学者および経験者は既存の投稿により教育を依頼（受託）できます。
+   *初学者は学びたい内容を投稿できます。経験者から返事が来るのを待ちます。  
+   *経験者は教えたい内容を投稿できます。投稿を見た初学者から教育の依頼が来るのを待ちます。  
+   *初学者および経験者は既存の投稿により教育を依頼（受託）できます。  
 
 ## 目指した課題解決
    経験浅い医療職員の「教えて欲しい」や「学びたい」という思いを解決します。教えて欲しい内容や地域等を投稿することによって投稿内容の経験者を募り、出会いの機会を提供します。
@@ -27,7 +28,7 @@
 
 
 
-# テーブル設計（まだ未設計です）
+# テーブル設計
 
 ## users テーブル
 
@@ -45,32 +46,9 @@
 ### Association
 - has_many :relearns
 - has_many :learns
-
-
-## room_users テーブル(未実装)
-
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
-
-
-## rooms テーブル(未実装)
-
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
-
-### Association
-
 - has_many :room_users
-- has_many :users, through: room_users
-
+- has_many :rooms, through: room_users
+- has_many :messages
 
 
 ## learns テーブル
@@ -93,6 +71,7 @@
 - belongs_to :user
 - has_many :relearns
 
+
 ## relearns テーブル
 
 | Column        | Type       | Options                       |
@@ -112,6 +91,48 @@
 
 ### Association
 - belongs_to :user
+- belongs_to :learn
+
+
+
+
+## room_users テーブル(未実装)
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| room   | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :room
+- belongs_to :user
+
+
+## rooms テーブル(未実装)
+
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
+
+### Association
+- belongs_to :learn
+- has_many :room_users
+- has_many :users, through: room_users
+
+
+## messages テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | string     |                                |
+| user    | references | null: false, foreign_key: true |
+| room    | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :room
+- belongs_to :user
+
+
 
 
 
@@ -133,7 +154,7 @@
 
 
 
-
+###################################   以下参考用    ####################################
 
 
 - has_many :room_users

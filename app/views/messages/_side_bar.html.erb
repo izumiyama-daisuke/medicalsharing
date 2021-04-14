@@ -1,27 +1,16 @@
-<%= render "shared/header" %>
-
- <div class='top-page-div0'>
-  <div class='top-page-div1'>
-    <a class='top-page-title'>メディシェアとは</a>
-    <div class='top-page-div2'>メディシェアでは医療に関する質問を投稿できます。</div>
-    <div class='top-page-div2'>質問に対して様々な方からの意見を募集できます。</div>
+<div class="chat-side-bar">
+  <div class="chat-side-ber-toptitle">
+    <p class="chat-side-ber-toptitle-text">チャットルーム</p>
   </div>
- </div>
 
+  <%#-----------------  left-block   --------------------%>
 
-<%#/登録した教えて！を表示試し %>
-
- <div class="flex">
-   <div class="top-page-content1-title">教えて！  新規投稿一覧</div>
- </div>
-
-<div class="top-page-content1-form">
   <% @learns.each do |learn| %>
     <div class="learn-list">
+    <% if learn.id == @learn.id %><%#-----------------  test   --------------------%>
       <%= link_to learn_path(learn.id) do %>    <%# 詳細ページへリンク %>
         <div class="top-page-content1-1" >       <%# 一つの投稿の外枠 %>
           <p class="top-page-content1-studytitle"><%= learn.studytitle.truncate(12) %></p>
-
           <span class="top-page-content1-job2">投稿者：
             <span class="top-page-content1-job1"><%= learn.user.nickname %></span><br>
           </span>
@@ -36,20 +25,27 @@
           <% end %>
         </div>
       <% end %>
+    <% end %><%#-----------------  test   --------------------%>
     </div>
   <% end %>
+<%#-----------------  --------------------%>
+  <%= link_to(new_learn_room_path(@learn, @learn.id)) do %>
+  <div class="chat-side-ber-toptitle1">
+      <p class="chat-side-ber-toptitle-text1">新規チャットルームを作成</p>
+  </div>
+  <% end %>
+  <%#----------------- ルーム名を表示 --------------------%>
+  <div class="rooms">
+  <% current_user.rooms.each do |room| %>
+  <%= link_to(learn_room_messages_path(room_id: room.id)) do %>
+    <div class="room">
+      <div class="room-name">
+        <%= room.name %>
+      </div>
+    </div>
+  <% end %>
+  <% end %>
+  </div>
+<%#-----------------   --------------------%>
+
 </div>
-
-
-
-<footer></footer>
-
-<%= link_to('/learns/new', class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>投稿する</span>
-  <%= image_tag 'menu_coffee01.jpg' , size: '185x50' ,class: "purchase-btn-icon" %>
-<% end %>
-
-
-
-
-

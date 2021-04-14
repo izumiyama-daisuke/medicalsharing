@@ -68,6 +68,7 @@
     <% if relearn.learn.id.to_i == params[:id].to_i %>
      <div class="learn-list-show">       <%# 一つの投稿の外枠 %>
       <%= link_to learn_relearn_path(relearn.id) do %>     <%# 詳細ページへリンク %>
+      <%#= link_to(new_learn_room_path(@learn.id), class: 'purchase-btn4') do %>
         <div class="#" >
           <div class="#">投稿者：
             <span class="relearn-job-name"><%= relearn.job.name.truncate(10) %></span>
@@ -95,7 +96,7 @@
   <div class="#">
     <div class="learn-boxx">
       <div class="learn-box-title-show">
-        <b>投稿の内容</b>
+        <b>返信の内容</b>
       </div>
       <div class="learn-box-1">
         <b>あなたの職業<br></b>
@@ -154,7 +155,8 @@
             <span class='purchase-btn-text'>教える</span>
             <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
           <% end %>
-          <%= link_to(learn_path(@learn.id), class: 'purchase-btn4') do %>
+          <%#= link_to(learn_room_messages_path(@learn, @learn.id), class: 'purchase-btn4') do %>
+          <%= link_to(learn_room_messages_path(@learn, @learn.id, room_id: 0), class: 'purchase-btn4') do %>
             <span class='purchase-btn-text'>チャット</span>
             <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
           <% end %>

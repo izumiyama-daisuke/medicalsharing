@@ -1,0 +1,189 @@
+
+.wrapper {
+  display: flex;
+}
+
+// サイドバーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー//
+.chat-side-bar {
+  background-color: aquamarine;
+  width: 24vw;
+  border: 3px solid black;
+  min-height: 84vh;
+}
+.chat-side-ber-toptitle {
+  width: 100%;
+  height: 50px;        // ---------chat-side-ber-toptitle-textと同じ高さ------------//
+  font-size: 20px;
+  margin: 0px auto;
+  padding: auto 30px;
+}
+.chat-side-ber-toptitle-text {
+  text-align: center;
+  line-height: 50px;
+}
+/*-----------------  返信の投稿の飾り   --------------------*/
+.chat-side-ber-toptitle-text1 {
+  line-height: 50px;
+  text-align: center;
+  color: rgb(1, 3, 5);
+  width: 100%;
+  height: 50px;
+  background-color: rgb(236, 70, 200);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  transition: box-shadow 1s ease-out, transform 1s ease-out;
+}
+.chat-side-ber-toptitle-text1:hover {
+  box-shadow: 0 15px 10px 5px rgb(0, 0, 0);
+  transform: translateY(-10px);
+}
+/*---------ルーム名を表示--------*/
+.room {
+  padding: 10px 0px 2px 20px;
+  margin: 10px;
+  border: 1px solid black;
+  transition: box-shadow 1s ease-out, transform 1s ease-out;
+}
+.room:hover {
+  box-shadow: 0 15px 10px 5px rgb(0, 0, 0);
+  transform: translateY(-10px);
+}
+/*-----------------  --------------  --------------------*/
+// メイン画面ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー//
+.chat-main-form {
+width: 76vw;
+height:69vh;
+padding: 20px;
+border-top: 3px solid black;
+border-right: 3px solid black;
+overflow: scroll;
+}
+
+.chat-main-top {
+  width: 100%;
+}
+.chat-main-top-title {
+  font-weight: bolder;
+  font-style: oblique;
+}
+.chat-main-top-title-text {
+  color: red;
+}
+.chat-main-bottom {
+  background-color: rgb(25, 152, 236);
+  width: 100%;
+  height: 15%;
+}
+//入力画面ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー//
+
+.chat-main-bottom {
+  width: 76vw;
+  background: #3ccace;
+  text-align: center;
+  bottom: 0px;
+  right: 0px;
+  position: fixed;
+  padding: 15px;
+  border: 3px solid black;
+  display: flex;
+}
+//入力画面ーー試しーーーーーーーーーーーー
+
+
+.form-input {
+  background-color: white;
+  display: flex;
+  width: 50vw;
+  height: 50px;
+}
+.form {
+  display: flex;
+}
+
+.form-message {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+  height: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-submit {
+  background-color: #38AEF0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+//自分のチャットメッセージの表示ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー//
+.message-one {
+  padding: 20px 0px;
+  
+}
+
+.message {   //チャットメッセージの外枠
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px 0px;
+  border-radius: 20px;
+  background-color: chartreuse;
+  max-width: 60%;
+  text-align:left;
+  margin: 0 auto 0 0; 
+}
+
+.upper-message {
+}
+
+.message-user {
+  color: red;
+  margin-right: 20px;
+}
+
+.lower-message {
+}
+//相手のチャットメッセージの表示ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー//
+.message-one2 {
+  padding: 20px 0px;
+}
+
+.message2 {   //チャットメッセージの外枠
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px 0px;
+  border-radius: 20px;
+  background-color: rgb(238, 155, 217);
+  max-width: 60%;
+  text-align:left;
+  margin: 0 0 0 auto; 
+}
+
+.upper-message2 {
+}
+
+.message-user2 {
+  color: white;
+  margin-right: 20px;
+}
+
+.lower-message2 {
+}
