@@ -25,6 +25,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to learn_room_messages_path(@learn, @room)
     else
+      @learns = Learn.all.includes(:user).order("created_at DESC")########
       @messages = @room.messages.includes(:user)###必要か？メッセージを表示
       render :index
     end
