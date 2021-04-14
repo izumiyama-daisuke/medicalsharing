@@ -1,0 +1,47 @@
+<% if message.user == current_user %>
+<div class="message-one">
+ <div class="message">
+  <div class="upper-message">
+    <span class="message-user">
+      <!-- 投稿したユーザー名情報を出力する -->
+      <%= message.user.nickname %>
+    </span>
+    <span class="message-date">
+      <!-- 投稿した時刻を出力する -->
+      <%= message.created_at %>
+    </span>
+  </div>
+  <div class="lower-message">
+    <div class="message-content">
+      <!-- 投稿したメッセージ内容を記述する -->
+      <%= message.content %>
+    </div>
+  </div>
+ </div>
+</div>
+
+
+
+<% else %>
+<div class="message-one2">
+ <div class="message2">
+  <div class="upper-message2">
+    <span class="message-user2">
+      <!-- 投稿したユーザー名情報を出力する -->
+      <%= message.user.nickname %>
+    </span>
+    <span class="message-date2">
+      <!-- 投稿した時刻を出力する -->
+      <%= message.created_at %>
+    </span>
+  </div>
+  <div class="lower-message2">
+    <div class="message-content2">
+      <!-- 投稿したメッセージ内容を記述する -->
+      <%= message.content %>
+    </div>
+  </div>
+ </div>
+</div>
+
+<% end %>

@@ -1,10 +1,9 @@
 <div class="chat-main-form">
-  <div class="chat-main-top">チャット画面
-  <br>------エンド<br>------<br>------<br>------<br>------<br>------<br>------<br>------
-  <br>------<br>------<br>------<br>------<br>------<br>------<br>------<br>------
-  <br>------<br>------<br>------<br>------<br>------<br>------<br>------<br>------
-  <br>------<br>------<br>------<br>------<br>------<br>------<br>------<br>------
-  <br>------<br>------<br>------<br>------<br>------<br>------<br>------<br>------エンド
+  <div class="chat-main-top">
+    <div>チャット画面 (ルーム： <%= @room_name %>)</div>
+    <div class="messages">
+      <%= render partial: 'message', collection: @messages %><%# メッセージを表示 %> 
+    </div>
   </div>
   
   <div class="chat-main-bottom">
