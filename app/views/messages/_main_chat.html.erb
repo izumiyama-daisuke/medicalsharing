@@ -1,6 +1,10 @@
 <div class="chat-main-form">
   <div class="chat-main-top">
-    <div>チャット画面 (ルーム： <%= @room_name %>)</div>
+    <span class="chat-main-top-title">チャット画面 (ルーム： 
+      <span class="chat-main-top-title-text">
+        <%= @room_name %>)
+      </span>
+    </span>
     <div class="messages">
       <%= render partial: 'message', collection: @messages %><%# メッセージを表示 %> 
     </div>

@@ -37,11 +37,13 @@
   <%#----------------- ルーム名を表示 --------------------%>
   <div class="rooms">
   <% current_user.rooms.each do |room| %>
+  <%= link_to(learn_room_messages_path(room_id: room.id)) do %>
     <div class="room">
       <div class="room-name">
-        <%= link_to room.name, learn_room_messages_path(room_id: room.id) %>
+        <%= room.name %>
       </div>
     </div>
+  <% end %>
   <% end %>
   </div>
 <%#-----------------   --------------------%>
