@@ -7,15 +7,15 @@
     </span>
 
     <% if params[:room_id].to_i != 0 %>
-    <div class="header-button">
-      <%= link_to "チャットを終了する", learn_room_path(id: @room.id), method: :delete %>
-    </div>
+    <span class="header-delete-button1">
+      <%= link_to "チャットルームを終了（削除）", learn_room_path(id: @room.id), class:'delete-text', method: :delete %>
+    </span>
     <% end %>
-
+  </div>
     <div class="messages">
       <%= render partial: 'message', collection: @messages %><%# メッセージを表示 %> 
     </div>
-  </div>
+  <%#/div%>
   
   <div class="chat-main-bottom">
    <% if params[:room_id].to_i != 0 %><%# チャット相手を洗濯しないと入力欄を非表示 %>

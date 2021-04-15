@@ -9,11 +9,26 @@
  </div>
 
 
-<%#/登録した教えて！を表示試し %>
+<%#/登録した教えて！を表示 %>
 
  <div class="flex">
    <div class="top-page-content1-title">教えて！  新規投稿一覧</div>
  </div>
+ 
+<%#職種で検索 %><%#--------------------------------------------------------------------------------------%>
+ <div class="flex">
+   <div class="">職種で検索</div>
+   <%= form_with model: @learn, url:learns_path, local: true do |f| %>
+   <%= f.collection_select(:job_id, Job.all, :id, :name, {}, {class:"job-select"}) %><br>
+   <%# end %>
+
+   <%#= link_to root_path() do %> 
+     <div class="search">検索</div>
+   <%# end %>
+   <% end %>
+ </div>
+<%#--------------------------------------------------------------------------------------%>
+
 
 <div class="top-page-content1-form">
   <% @learns.each do |learn| %>
