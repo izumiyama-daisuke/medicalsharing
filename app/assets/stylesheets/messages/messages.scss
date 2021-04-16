@@ -63,6 +63,8 @@ overflow: scroll;
 
 .chat-main-top {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .chat-main-top-title {
   font-weight: bolder;
@@ -76,6 +78,23 @@ overflow: scroll;
   width: 100%;
   height: 15%;
 }
+.header-delete-button1 {
+  background-color: red;
+  font-weight: bolder;
+  padding:10px;
+  text-align: center;
+  justify-content: right;
+  border-radius: 40px;
+  transition: box-shadow 1s ease-out, transform 1s ease-out;
+}
+.header-delete-button1:hover {
+  box-shadow: 0 15px 10px 5px rgb(0, 0, 0);
+  transform: translateY(-10px);
+}
+.delete-text {
+  color: white;
+}
+
 //入力画面ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー//
 
 .chat-main-bottom {
