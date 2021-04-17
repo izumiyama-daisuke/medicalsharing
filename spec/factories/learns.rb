@@ -13,5 +13,6 @@ FactoryBot.define do
     learn_num_id              { '2' }
 
     association :user
+    
   end
 end
