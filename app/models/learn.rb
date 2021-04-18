@@ -5,6 +5,16 @@ class Learn < ApplicationRecord
   has_one_attached :image
   has_many :rooms, dependent: :destroy
 
+  def self.search(search)
+    if search != ""
+      Learn.where('study LIKE(?)', "%#{search}%")
+      #Learn.where('text LIKE(?)', "%#{search}%")
+    else
+      Learn.all
+    end
+  end
+
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :area
   belongs_to :gender
@@ -28,4 +38,10 @@ class Learn < ApplicationRecord
     validates :learn_num_id
     validates :prefecture_id
   end
+end
+
+
+private
+def search   #検索用に記述
+  @learns = Learn.search(params[:keyword])
 end

@@ -13,10 +13,10 @@ Rails.application.routes.draw do
 #  end
   
   resources :learns do
-    resources :relearns, only: [:new, :create, :show]
     collection do    #追加
       get 'search'   #
-    end              #
+    end             #
+    resources :relearns, only: [:new, :create, :show]
     resources :rooms, only: [:new, :create, :destroy] do
       resources :messages, only: [:index, :create]
     end

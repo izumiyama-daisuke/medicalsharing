@@ -1,0 +1,33 @@
+<%= render "shared/header" %>
+
+
+<%# binding.pry %>
+  <% if @learns.length.to_i != 0 %>    <%# 投稿の有無を確認 %>
+  <div class="search-learns-list">
+  <% @learns.each do |learn| %>
+  <%#-------------------------------------------------------%>
+    <div class="learn-list">
+      <%= link_to learn_path(learn.id) do %>    <%# 詳細ページへリンク %>
+        <div class="top-page-content1-1" >       <%# 一つの投稿の外枠 %>
+          <p class="top-page-content1-studytitle"><%= learn.studytitle.truncate(12) %></p>
+          <span class="top-page-content1-job2">投稿者：
+            <span class="top-page-content1-job1"><%= learn.user.nickname %></span><br>
+          </span>
+          <span class="top-page-content1-job2">職　業：
+            <span class="top-page-content1-job1"><%= learn.job.name %></span>
+          </span>
+          <p class="top-page-content1-study"><%= learn.study.truncate(80) %></p>
+          <% if learn.thankyou_money != 0 && learn.thankyou_money != nil %>
+            <div class="top-page-content1-money-form">
+              <p class="top-page-content1-money">お礼金 <%= learn.thankyou_money.truncate(7) %>円</p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <%#-------------------------------------------------------%>
+  <% end %>
+  </div>
+  <% else %>
+    <h1 class="#">"該当する投稿はありませんでした"</h1>
+  <% end %>
