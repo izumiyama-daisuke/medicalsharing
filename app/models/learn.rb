@@ -7,13 +7,12 @@ class Learn < ApplicationRecord
 
   def self.search(search)
     if search != ""
-      Learn.where('study LIKE(?)', "%#{search}%")
-      #Learn.where('text LIKE(?)', "%#{search}%")
+      Learn.where (['study LIKE(?) or studytitle LIKE(?)' , "%#{search}%", "%#{search}%"])
+      #Learn.where('study LIKE(?)', "%#{search}%")
     else
       Learn.all
     end
   end
-
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :area
