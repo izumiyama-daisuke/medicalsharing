@@ -11,6 +11,14 @@
       <button class="search-button">
         <%= image_tag "search.png", class:"search-icon" %>
       </button>
+<%#--------------------検索機能の実装ーーーーーーーーーーーーーーーーーーーーーーーーーー%>
+      <%= form_with(url: search_learns_path, local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+        <%= form.submit "検索", class: "search-button" %>
+      <% end %>
+
+
+
     </form>
 
     <div class='top-page-header-div1'>
