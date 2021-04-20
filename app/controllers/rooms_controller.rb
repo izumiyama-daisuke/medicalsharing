@@ -6,7 +6,6 @@ class RoomsController < ApplicationController
   end
 
   def create
-    #@room = Room.new(room_params)
     @room = Room.new(room_params)
     if @room.save
       redirect_to learn_room_messages_path(room_id: @room.id)
@@ -17,7 +16,6 @@ class RoomsController < ApplicationController
 
   def destroy
     room = Room.find(params[:id])
-    #room = Room.find(params[:room_id])
     room.destroy
     redirect_to root_path
   end
@@ -25,6 +23,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:name, user_ids: [])#.merge(room_id: @room.id)いらない、あとで消す
+    params.require(:room).permit(:name, user_ids: [])
   end
 end

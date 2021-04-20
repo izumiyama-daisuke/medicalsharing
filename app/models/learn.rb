@@ -8,7 +8,6 @@ class Learn < ApplicationRecord
   def self.search(search)
     if search != ""
       Learn.where (['study LIKE(?) or studytitle LIKE(?)' , "%#{search}%", "%#{search}%"])
-      #Learn.where('study LIKE(?)', "%#{search}%")
     else
       Learn.all
     end
