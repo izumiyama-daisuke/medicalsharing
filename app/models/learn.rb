@@ -1,8 +1,8 @@
 class Learn < ApplicationRecord
   belongs_to :user
   has_many :relearns, dependent: :destroy
-  has_one_attached :image
   has_many :rooms, dependent: :destroy
+  has_one_attached :image
 
   def self.search(search)
     if search != ""

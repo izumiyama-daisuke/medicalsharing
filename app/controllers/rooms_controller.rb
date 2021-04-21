@@ -7,6 +7,7 @@ class RoomsController < ApplicationController
 
   def create
     @room = Room.new(room_params)
+
     if @room.save
       redirect_to learn_room_messages_path(room_id: @room.id)
     else
@@ -17,7 +18,7 @@ class RoomsController < ApplicationController
   def destroy
     room = Room.find(params[:id])
     room.destroy
-    redirect_to root_path
+    redirect_to learn_path(room_id: 0, id: params[:learn_id]) #元はroot_path
   end
 
   private

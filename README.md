@@ -1,5 +1,14 @@
 # README
+<option value=<%= user.id %>><%= user.nickname %></option>
 
+<select name="room[user_ids][]">
+          <option value="">チャットするユーザーを選択してください</option>
+          <%# User.where.not(id: current_user.id).each do |user| %>
+            <option value=<%= user.id %>><%= Learn.find(params[:learn_id]).user.nickname %></option>
+          <%# end %>
+        </select>
+
+        
 ## app name
   medishar[メディシェア]<br>
   medicalsharing
