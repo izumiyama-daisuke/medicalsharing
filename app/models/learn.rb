@@ -1,7 +1,6 @@
 class Learn < ApplicationRecord
   belongs_to :user
   has_many :relearns, dependent: :destroy
-  # has_one :
   has_one_attached :image
   has_many :rooms, dependent: :destroy
 
