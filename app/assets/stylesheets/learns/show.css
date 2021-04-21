@@ -14,6 +14,14 @@
   background-color: lightgreen;
 }
 
+.learn-box-text {
+  background-color: white;
+  margin: 0px;
+  padding: 4px 0 4px 5px;
+  border: 1px solid black;
+  width: 95%;
+}
+
 /*-------------左の吹き出しタイトル--------------------------*/
 .learn-box-title-show {
   position: relative;
@@ -101,9 +109,36 @@
 .right-blocks {
   width: 30%;
   padding: 25px 10px 10px 20px;
-  background-color: rgb(202, 214, 226);
+  /*background-color: rgb(202, 214, 226);*/
+  border: 1px solid black;
+}
+  .relearn-box-title {
+    background-color:#6df0b9;
+    padding: 3px 10px;
 
-  
+  }
+  /*-------------右の吹き出しタイトル--------------------------*/
+.learn-box-title-show-right {
+  position: relative;
+  padding: 1.5rem 2rem;
+  margin-left: 40px;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 10px;
+  background: #4ccff7;
+  width: 300px;
+}
+
+.learn-box-title-show-right:before {
+  position: absolute;
+  bottom: -9px;
+  left: 1em;
+  width: 0;
+  height: 0;
+  content: '';
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: rgb(79, 20, 241) transparent transparent transparent;
 }
 /*-------------------------------------*/
 /*-----------------  right-menu-block    --------------------*/

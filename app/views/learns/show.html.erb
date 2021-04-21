@@ -9,47 +9,67 @@
         <b>投稿の内容</b>
       </div>
       <div class="learn-box-1">
-        <b>あなたの職業<br></b>
-        <%= @learn.job.name %><br>
+        <b>投稿者のお名前<br></b>
+        <div class="learn-box-text">
+        <%= @learn.user.nickname %>(<%= @learn.job.name %>)<br>
+        </div>
       </div>
 
       <div class="learn-box-1">
         <b>性別<br></b>
+        <div class="learn-box-text">
         <%= @learn.gender.name %><br>
+        </div>
       </div>
 
       <div class="learn-box-1">
         <b>学びたい内容のタイトル<br></b>
+        <div class="learn-box-text">
         <%= @learn.studytitle %><br>
+        </div>
       </div>
 
       <div class="learn-box-1">
         <b>学びたい内容を記入して下さい<br></b>
+        <div class="learn-box-text">
         <%= @learn.study %><br>
+        </div>
       </div>
       <div class="learn-box-1">
         <b>都道府県<br></b>
+        <div class="learn-box-text">
         <%= @learn.prefecture.name %><br>
+        </div>
       </div>
       <div class="learn-box-1">
         <b>場所の提供は？<br></b>
+        <div class="learn-box-text">
         <%= @learn.area.name %><br>
+        </div>
       </div>
       <div class="learn-box-1">
         <b>場所の詳細情報<br></b>
+        <div class="learn-box-text">
         <%= @learn.area_provided %><br>
+        </div>
       </div>
       <div class="learn-box-1">
         <b>教育を受ける側の一人あたりのお礼金<br></b>
+        <div class="learn-box-text">
         <%= @learn.thankyou_money %><br>
+        </div>
       </div>
       <div class="learn-box-1">
         <b>教育を受ける側の人数<br></b>
+        <div class="learn-box-text">
         <%= @learn.learn_num.name %><br>
+        </div>
       </div>
       <div class="learn-box-1">
         <b>条件など（資料の提供、資材の提供など）<br></b>
+        <div class="learn-box-text">
         <%= @learn.condition %><br>
+        </div>
       </div>
     </div>
   </div>
