@@ -11,8 +11,8 @@
    投稿に対する返信をすることでチャットボタンが出現します。
    チャットは投稿者と返信者のみが投稿・閲覧できます。
 
-   
-   ![top page](https://gyazo.com/5b08c0956e481677fd459e789834f675)
+   ![top-page](https://user-images.githubusercontent.com/74485639/115525231-dd4efe80-a2c9-11eb-827b-a20c767e890f.jpg)
+
 
 ## URL
    http://3.21.110.159/
