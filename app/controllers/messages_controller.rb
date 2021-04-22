@@ -4,16 +4,15 @@ class MessagesController < ApplicationController
     @relearns = Relearn.all.includes(:user).order("created_at DESC")
     @learns = Learn.all.includes(:user).order("created_at DESC")
     @message = Message.new
-    #@room = Room.new
 
 
-    if params[:room_id].to_i != 0 # チャット相手を洗濯しないと入力欄を非表示 
+    if params[:room_id].to_i != 0 # チャット相手を選択しないと入力欄を非表示 
       room_name = Room.find(params[:room_id])##ルーム名を表示する
       @room_name = room_name.name##ルーム名を表示する
+
       @@room = Room.find(params[:room_id])##メッセージを表示する
       @messages = @@room.messages.includes(:user).order("created_at DESC")##メッセージを表示する
       @room = Room.find(params[:room_id])##ルームを削除
-      #@room = Room.find(params[:id])##ルームを削除
     else
       @room = Room.new
       @room_name = "ルームを選択してください！"##ルーム名を表示する
@@ -26,7 +25,7 @@ class MessagesController < ApplicationController
     @message = @room.messages.new(message_params)
     
     if @message.save
-      redirect_to learn_room_messages_path(@learn, @room)
+      redirect_to learn_relearn_room_messages_path(@learn, @room)
     else
       @learns = Learn.all.includes(:user).order("created_at DESC")########
       @messages = @room.messages.includes(:user)###必要か？メッセージを表示

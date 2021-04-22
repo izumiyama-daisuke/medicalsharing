@@ -14,9 +14,14 @@ class RelearnsController < ApplicationController
   end
 
   def show
-    @learn = Learn.find(params[:id])
-    @relearn = Relearn.find(params[:learn_id])
+    @learn = Learn.find(params[:learn_id])
+    @relearn = Relearn.find(params[:id])
     @relearns = Relearn.all.includes(:user).order("created_at DESC")
+
+
+ #   @learn = Learn.find(params[:id])
+  #  @relearn = Relearn.find(params[:learn_id])
+   # @relearns = Relearn.all.includes(:user).order("created_at DESC")
 
   end
 

@@ -1,7 +1,6 @@
 <div class='chat-room-form'>
   <h1>新規チャットルーム</h1>
-  <%#=form_with model: @room, url: new_learn_room_path, local: true do |f|%><%#ーーーモデルの記載だけではエラーなのでurlを追記ーーー%>
-  <%=form_with model: @room, url: learn_rooms_path, local: true do |f|%><%#ーーーモデルの記載だけではエラーなのでurlを追記ーーー%>
+  <%=form_with model: @room, url: learn_relearn_rooms_path(learn_id: params[:learn_id], relearn_id: params[:relearn_id] ,id: @room.id), local: true do |f|%><%#ーーーモデルの記載だけではエラーなのでurlを追記ーーー%>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
         <%= f.label :チャットルーム名, class: 'chat-room-form__label'%>
@@ -22,8 +21,12 @@
         <select name="room[user_ids][]">
           <option value="">チャットするユーザーを選択してください</option>
           <%# User.where.not(id: current_user.id).each do |user| %>
+          <% if Learn.find(params[:learn_id]) != current_user %>
             <option value=<%= Learn.find(params[:learn_id]).user.id %>><%= Learn.find(params[:learn_id]).user.nickname %></option>
           <%# end %>
+          <% else %>
+            <option value=<%= Learn.find(params[:id]).user.id %>><%= Learn.find(params[:id]).user.nickname %></option>
+          <% end %>
         </select>
 
         

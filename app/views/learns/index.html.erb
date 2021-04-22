@@ -33,7 +33,8 @@
 <div class="top-page-content1-form">
   <% @learns.each do |learn| %>
     <div class="learn-list">
-      <%= link_to learn_path(learn.id) do %>    <%# 詳細ページへリンク %>
+      <%= link_to learn_path(learn_id: learn.id, id: 0) do %>
+      <%#= link_to learn_path(learn.id) do %>     <%# 詳細ページへリンク %>
         <div class="top-page-content1-1" >       <%# 一つの投稿の外枠 %>
           <p class="top-page-content1-studytitle"><%= learn.studytitle.truncate(12) %></p>
 

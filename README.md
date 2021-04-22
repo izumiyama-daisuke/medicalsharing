@@ -1,14 +1,5 @@
 # README
-<option value=<%= user.id %>><%= user.nickname %></option>
 
-<select name="room[user_ids][]">
-          <option value="">チャットするユーザーを選択してください</option>
-          <%# User.where.not(id: current_user.id).each do |user| %>
-            <option value=<%= user.id %>><%= Learn.find(params[:learn_id]).user.nickname %></option>
-          <%# end %>
-        </select>
-
-        
 ## app name
   medishar[メディシェア]<br>
   medicalsharing
@@ -21,6 +12,9 @@
    チャットは投稿者と返信者のみが投稿・閲覧できます。
 
    ![top-page](https://user-images.githubusercontent.com/74485639/115525231-dd4efe80-a2c9-11eb-827b-a20c767e890f.jpg)
+
+   チャット機能
+   https://user-images.githubusercontent.com/74485639/115661205-0c23ae00-a378-11eb-95b4-c4c6d630e51f.mp4
 
 
 ## URL

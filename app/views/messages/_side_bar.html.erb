@@ -8,7 +8,7 @@
   <% @learns.each do |learn| %>
     <div class="learn-list">
     <% if learn.id == @learn.id %><%#-----------------  test   --------------------%>
-      <%= link_to learn_path(learn.id) do %>    <%# 詳細ページへリンク %>
+      <%= link_to learn_path(learn.id, learn_id: params[:learn_id]) do %>    <%# 詳細ページへリンク %>
         <div class="top-page-content1-1" >       <%# 一つの投稿の外枠 %>
           <p class="top-page-content1-studytitle"><%= learn.studytitle.truncate(12) %></p>
           <span class="top-page-content1-job2">投稿者：
@@ -29,7 +29,7 @@
     </div>
   <% end %>
 <%#-----------------  --------------------%>
-  <%= link_to(new_learn_room_path(@learn, @learn.id)) do %>
+  <%= link_to(new_learn_relearn_room_path(learn_id: params[:learn_id], relearn_id: params[:relearn_id])) do %>
   <div class="chat-side-ber-toptitle1">
       <p class="chat-side-ber-toptitle-text1">新規チャットルームを作成</p>
   </div>
@@ -37,7 +37,7 @@
   <%#----------------- ルーム名を表示 --------------------%>
   <div class="rooms">
   <% current_user.rooms.each do |room| %>
-  <%= link_to(learn_room_messages_path(room_id: room.id)) do %>
+  <%= link_to(learn_relearn_room_messages_path(room_id: room.id)) do %>
     <div class="room">
       <div class="room-name">
         <%= room.name %>
