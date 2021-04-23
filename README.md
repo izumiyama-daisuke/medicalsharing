@@ -15,6 +15,9 @@
    ![top-page](https://user-images.githubusercontent.com/74485639/115525231-dd4efe80-a2c9-11eb-827b-a20c767e890f.jpg)
 ## 投稿ページ
    <img width="1352" alt="投稿ページ" src="https://user-images.githubusercontent.com/74485639/115818700-4785b180-a438-11eb-9437-192709c9fcef.png">
+## 投稿一覧
+   <img width="1397" alt="スクリーンショット 2021-04-20 22 00 23" src="https://user-images.githubusercontent.com/74485639/115819094-207baf80-a439-11eb-8a5a-95b3e8490356.png">
+
 
 
    チャット機能
