@@ -36,13 +36,20 @@
   <% end %>
   <%#----------------- ルーム名を表示 --------------------%>
   <div class="rooms">
+
+  <% rooms = Room.all %>
   <% current_user.rooms.each do |room| %>
   <%= link_to(learn_relearn_room_messages_path(room_id: room.id)) do %>
+
+    <% if room.id.to_i != params[:room_id].to_i %>
     <div class="room">
       <div class="room-name">
-        <%= room.name %>
+         <%= room.name %>
       </div>
     </div>
+    <% end %>
+
+
   <% end %>
   <% end %>
   </div>
