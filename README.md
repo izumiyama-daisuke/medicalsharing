@@ -20,16 +20,20 @@
 
 
 
-   チャット機能
-   https://user-images.githubusercontent.com/74485639/115661205-0c23ae00-a378-11eb-95b4-c4c6d630e51f.mp4
+## チャット機能
+   ![チャット動画](https://user-images.githubusercontent.com/74485639/115865728-b03e4f80-a473-11eb-88f0-250049906355.gif)
 
 
 ## 本番環境
    URL  http://3.21.110.159/
 
-   basic認証       ID : admin      PS : 0000
+   basic認証       
+   ID : admin      
+   PS : 0000
 
-   テストアカウント  ID : test1@com  PS : test1111
+   テストアカウント  
+   ID : test1@com  
+   PS : test1111
 
 ## 利用方法
    *初学者は学びたい内容を投稿できます。経験者から返事が来るのを待ちます。  
@@ -52,7 +56,8 @@
    GitHub
    AWS EC2
 
-
+## 課題、今度実装したい機能
+   セキュリティーを向上させることにより、アプリ内でクレジットカードを使用できるようにしたい。
 
 
 # テーブル設計
