@@ -50,11 +50,11 @@
 
 ## 使用技術（開発環境）
    Ruby 2.6.5<br>
-   Ruby on Rails 6.0.0
-   VScode
-   HTML, JavaScript, CSS
-   GitHub
-   AWS EC2
+   Ruby on Rails 6.0.0<br>
+   VScode<br>
+   HTML, JavaScript, CSS<br>
+   GitHub<br>
+   AWS EC2<br>
 
 ## 課題、今度実装したい機能
    セキュリティーを向上させることにより、アプリ内でクレジットカードを使用できるようにしたい。
