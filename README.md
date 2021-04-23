@@ -27,13 +27,13 @@
 ## 本番環境
    URL  http://3.21.110.159/
 
-   basic認証       
-   ID : admin      
-   PS : 0000
+   basic認証 
+   ID : admin 
+   PS : 0000 
 
-   テストアカウント  
-   ID : test1@com  
-   PS : test1111
+   テストアカウント 
+   ID : test1@com 
+   PS : test1111 
 
 ## 利用方法
    *初学者は学びたい内容を投稿できます。経験者から返事が来るのを待ちます。  
