@@ -1,6 +1,7 @@
 <% if message.user == current_user %>
-<div class="message-one">
- <div class="message">
+
+<div class="message-one" >
+ <div class="message" data-id=<%= message.id %> data-check=<%= message.checked %>><!--data-idとdata-checkのカスタムデータ属性を追加--> 
   <div class="upper-message">
     <span class="message-user">
       <!-- 投稿したユーザー名情報を出力する -->
@@ -24,8 +25,8 @@
 
 
 <% else %>
-<div class="message-one2">
- <div class="message2">
+<div class="message-one">
+ <div class="message2" data-id=<%= message.id %> data-check=<%= message.checked %>><!--data-idとdata-checkのカスタムデータ属性を追加--> 
   <div class="upper-message2">
     <span class="message-user2">
       <!-- 投稿したユーザー名情報を出力する -->
