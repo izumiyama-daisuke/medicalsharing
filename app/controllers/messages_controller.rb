@@ -23,14 +23,18 @@ class MessagesController < ApplicationController
     @learn = Learn.find(params[:learn_id])
     @room = Room.find(params[:room_id])
     @message = @room.messages.new(message_params)
+
+
+    message = Message.create(content: params[:content], checked: false)    #非同期通信（投稿）
+    render json:{ message: message }
     
-    if @message.save
-      redirect_to learn_relearn_room_messages_path(@learn, @room)
-    else
-      @learns = Learn.all.includes(:user).order("created_at DESC")########
-      @messages = @room.messages.includes(:user)###必要か？メッセージを表示
-      render :index
-    end
+#    if @message.save                                                    保存する
+#      redirect_to learn_relearn_room_messages_path(@learn, @room)
+#    else
+#      @learns = Learn.all.includes(:user).order("created_at DESC")########
+#      @messages = @room.messages.includes(:user)###必要か？メッセージを表示
+#      render :index
+#    end
   end
 
   def checked   #--------------------変更が必要です
