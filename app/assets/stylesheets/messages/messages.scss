@@ -180,17 +180,26 @@ overflow: scroll;
 
 .lower-message {
 }
-//相手のチャットメッセージの表示ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー//
-.message-one2 {
-  padding: 20px 0px;
+
+// 自分のメッセージをクリックしたら色が変わる
+div[data-check="true"] {
+  background: #04b121;
 }
+// 相手のメッセージをクリックしたら色が変わる
+div[data-check_t="true"] {
+  background: #cc0489;
+}
+//相手のチャットメッセージの表示ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー//
+//.message-one2 {
+//  padding: 20px 0px;
+//}
 
 .message2 {   //チャットメッセージの外枠
   border: 1px solid black;
   padding: 10px;
   margin: 5px 0px;
   border-radius: 20px;
-  background-color: rgb(238, 155, 217);
+  background-color: rgb(238, 167, 220);
   max-width: 60%;
   text-align:left;
   margin: 0 0 0 auto; 
@@ -210,3 +219,4 @@ overflow: scroll;
 .field_with_errors {
   display: contents;
 }
+

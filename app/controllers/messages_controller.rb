@@ -33,6 +33,18 @@ class MessagesController < ApplicationController
     end
   end
 
+  def checked   #--------------------変更が必要です
+    message = Message.find(params[:id])   #--------------------Post Messegeに変更
+    if message.checked 
+      message.update(checked: false)
+    else
+      message.update(checked: true)
+    end
+
+    item = Message.find(params[:id])#--------------------Post Messegeに変更
+    render json: { message: item }
+  end
+
   private
 
   def message_params

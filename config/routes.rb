@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'learns/index'
   root to: "learns#index"
+  get 'messages/:id', to: 'messages#checked'
 
 
 #  resources :learns do
@@ -22,7 +23,7 @@ Rails.application.routes.draw do
     end             #
     resources :relearns, only: [:new, :create, :show] do
       resources :rooms, only: [:new, :create, :destroy] do
-        resources :messages, only: [:index, :create]
+        resources :messages, only: [:index, :create, :checked]
       end
     end
   end
