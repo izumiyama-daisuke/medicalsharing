@@ -1,7 +1,11 @@
 <% if message.user == current_user %>
 
+
+<div id="m_list">              <!-- 非同期通信の投稿 -->
+</div>
+
 <div class="message-one" >
- <div class="message" data-id=<%= message.id %> data-check=<%= message.checked %>><!--data-idとdata-checkのカスタムデータ属性を追加--> 
+ <div class="message" data-id=<%= message.id %> data-check=<%= message.checked %>><!--data-idとdata-checkのカスタムデータ属性を追加-->  
   <div class="upper-message">
     <span class="message-user">
       <!-- 投稿したユーザー名情報を出力する -->

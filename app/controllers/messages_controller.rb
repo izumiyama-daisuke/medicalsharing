@@ -20,21 +20,14 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @learn = Learn.find(params[:learn_id])
-    @room = Room.find(params[:room_id])
-    @message = @room.messages.new(message_params)
+ #   @learn = Learn.find(params[:learn_id])               Ajaxのため一時的にコメントアウトです。直します
+ #   @room = Room.find(params[:room_id])
+ #   @message = @room.messages.new(message_params)
 
-
-    message = Message.create(content: params[:content], checked: false)    #非同期通信（投稿）
+    message = Message.create(message_params)     #非同期通信（投稿）
     render json:{ message: message }
+
     
-#    if @message.save                                                    保存する
-#      redirect_to learn_relearn_room_messages_path(@learn, @room)
-#    else
-#      @learns = Learn.all.includes(:user).order("created_at DESC")########
-#      @messages = @room.messages.includes(:user)###必要か？メッセージを表示
-#      render :index
-#    end
   end
 
   def checked   #--------------------変更が必要です
@@ -52,7 +45,8 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+ #   arams.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id, checked: false, room_id: @@room.id)
   end
 end
 
