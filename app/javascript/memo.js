@@ -17,14 +17,22 @@ function memo() {
       //formTextは、メモの入力フォームを取得しています。なぜなら、送信後に入力フォームの文字列を削除するためです。
       //非同期通信では画面遷移しないため、フォーム送信後であっても、入力した文字列が残ったままになってしまいます。スムーズに投稿を行えるよう、入力した文字列はフォームを送信するたびに削除したほうが好ましい
       const HTML = `
-        <div class="post" data-id=${item.id}>
-          <div class="post-date">
-            投稿日時：${item.created_at}
-          </div>
-          <div class="post-content">
-            ${item.content}
-          </div>
-        </div>`;
+      <div class="message-one" >
+      <div class="message" data-id=${item.id} data-check=${item.checked}>
+      <div class="upper-message">
+      投稿日時2：${item.created_at}
+      </div>
+      <div class="lower-message">
+      <div class="message-content">
+       ${item.content}
+      </div>
+      <div>
+       ※画像を表示する場合はページを更新してください。
+      </div>
+      </div>
+      </div>
+      </div>`;
+
       list.insertAdjacentHTML("afterend", HTML);
       formText.value = "";
     };
@@ -32,3 +40,53 @@ function memo() {
   });
 }
 window.addEventListener("load", memo);
+
+//<div class="message-one" >
+//<div class="message" data-id=${item.id} data-check=${item.checked}>
+//  <div class="upper-message">
+//    <span class="message-user">
+//      ${item.user.nickname}
+//    </span>
+//    <span class="message-date">
+//      ${l item.created_at}
+//    </span>
+//  </div>
+//  <div class="lower-message">
+//    <div class="message-content">
+//      ${item.content}
+//    </div>
+//    ${image_tag item.image.variant(resize: '300x300'), class: 'message-image' if item.image.attached?}
+//  </div>
+//</div>
+//</div>`;
+
+
+//<div class="post" data-id=${item.id}>
+//<div class="post-date">
+//  投稿日時：${item.created_at}
+//</div>
+//<div class="post-content">
+//  ${item.content}
+//</div>
+//</div>`;
+
+//<div class="message-one" >
+//<div class="message" data-id=${item.id} data-check=${item.checked}>
+//  <div class="upper-message">
+//    <span class="message-user">
+//      ${item.user.nickname}
+//    </span>
+//    <span class="message-date">
+//      ${item.created_at}
+//    </span>
+//  </div>
+//  <div class="lower-message">
+//    <div class="message-content">
+//      ${item.content}
+//    </div>
+//    <div>
+//    画像を表示する場合はページを更新してください。
+//    </div>
+//  </div>
+//</div>
+//</div>`;
