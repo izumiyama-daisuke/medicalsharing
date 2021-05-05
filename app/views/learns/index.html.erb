@@ -57,13 +57,15 @@
 </div>
 
 
+
 <footer></footer>
 
-<%= link_to('/learns/new', class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>投稿する</span>
+<%= link_to('/learns/new', class: 'purchase-btn', id: 'learnbutton') do %>
+  <span class='purchase-btn-text'>投稿する</span>    <%# マウスを載せるとIDで  , id="learnbutton" %>
   <%= image_tag 'menu_coffee01.jpg' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
 
+<div class="hoverlearnbutton", id="aaaaa" >マウスを動かして決してね！</div>
 
 
 
