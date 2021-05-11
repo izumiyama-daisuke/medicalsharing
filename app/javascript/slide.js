@@ -1,19 +1,22 @@
+function slider() {         // 試しです
+
 // スライダーに表示する画像のパス
 var imgList = [
-	"images/img01.jpg",
-	"images/img02.jpg",
-	"images/img03.jpg",
-	"images/img04.jpg"
+	"/assets/img01.jpg",
+	"/assets/img02.jpg",
+	"/assets/img03.jpg",
+	"/assets/img04.jpg"
 ];
 
 // 画像とナビの要素を自動で追加
 for(var i = 0; i < imgList.length; i++) {
-	// li要素を取得
+	// li要素を取得(作成)
   var slide = document.createElement("li");
 	// li要素の中に画像タグを埋め込む
   slide.innerHTML = "<img src='" + imgList[i] + "'>";
-	// li要素をクラス名「slider-inner」の子要素として追加
-  document.getElementsByClassName("slider-inner")[0].appendChild(slide);
+	//slide.innerHTML = "<img src='" + imgList[i] + "' alt='おわた'>";
+		// li要素をクラス名「slider-inner」の子要素として追加
+		document.getElementsByClassName("slider-inner")[0].appendChild(slide);
 
 	// li要素を取得
   var nav = document.createElement("li");
@@ -81,3 +84,6 @@ for(var i = 0; i < dotNavigation.length; i++) {
 		sliderSlide(index);
 	}, false);
 }
+
+}    //お試しの終わり
+window.addEventListener("load", slider);
